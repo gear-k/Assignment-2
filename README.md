@@ -42,10 +42,4 @@ Example:
 - Map library: Leaflet (https://leafletjs.com/)
 - Inflation data source: World Bank API (https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG)
 
-Ensure that you comply with the licenses and terms of use of these external resources and provide credit where required.
 
-### 7. License<a name="license"></a>
-Specify the license under which your project is distributed. Include any relevant disclaimers or restrictions.
-
-Example:
-This project is licensed under the [MIT License](LICENSE.md).
