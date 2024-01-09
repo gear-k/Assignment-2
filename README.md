@@ -9,7 +9,7 @@
 4. [Features](#features)
 5. [Usage](#usage)
 6. [Attribution](#attribution)
-7. [License](#license)
+
 
 ### 1. Introduction<a name="introduction"></a>
 This README contains comprehensive documentation and research related to the Interactive Inflation Rate Map project.
