@@ -106,7 +106,7 @@
       </header>
       <section id="hero-section" class="container-fluid py-lg-8 pb-5">
         <div>
-          <div class="ps-5 py-5">
+          <div class="ps-0 ps-lg-5 py-5">
             <h1 class="display-1 fw-bold">Lorem Ipsum Dolor Sit Amet</h1>
             <h2 class="display-3 fw-bold">consectetur adipiscing elit</h2>
             <div>
@@ -148,15 +148,14 @@
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div
+          class="d-flex justify-content-center pb-5"
+          style="margin-bottom: 20px"
+        >
           <button type="button" class="btn btn-primary btn-lg">
             Learn More
           </button>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </section>
       <section
         class="container-fluid text-black"
@@ -165,14 +164,14 @@
         <div class="container-lg pt-5">
           <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
           <div class="row align-items-center">
-            <div class="col-12 col-lg order-lg-2">
+            <div class="col-12 col-md-6 order-md-2">
               <img
                 src="images/chicken.jpg"
-                class="img-fluid fixed-size-image"
+                class="img-fluid"
                 alt="just a sample"
               />
             </div>
-            <div class="col-12 col-lg order-lg-1">
+            <div class="col-12 col-md-6 order-md-1">
               <h2>Lorem Ipsum</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -183,14 +182,14 @@
 
           <!-- Second Row: Image followed by Text on all screen sizes -->
           <div class="row pt-6 align-items-center pb-5">
-            <div class="col-12 col-lg">
+            <div class="col-12 col-md-6">
               <img
                 src="images/zimbabwe.jpg"
-                class="img-fluid fixed-size-image"
+                class="img-fluid"
                 alt="just a sample"
               />
             </div>
-            <div class="col-12 col-lg">
+            <div class="col-12 col-md-6">
               <h2>Lorem Ipsum</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -242,5 +241,9 @@
     </main>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="js/script.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </body>
 </html>
