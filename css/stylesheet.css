@@ -43,10 +43,42 @@ body .offcanvas {
       rgba(0, 0, 0, 1) 100%
     ),
     url("../images/hyperinflation.jpg") no-repeat center/cover;
-  filter: grayscale(50%); /* Apply grayscale here */
+  filter: opacity(45%); /* Apply grayscale here */
   z-index: -1;
 }
 
 .btn {
   border-radius: 0; /* Removes the border-radius */
+}
+
+.navbar {
+  transition: background-color 0.5s;
+}
+
+.text-box {
+  background-color: white; /* Or any color you prefer */
+  padding: 20px;
+  margin-top: -100px; /* Adjust this value to control overlap */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.pt-6 {
+  padding-top: 100px;
+}
+
+.custom-text-color {
+  color: #000000 !important; /* Replace with your desired color */
+}
+
+.fixed-size-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover; /* This ensures the image covers the area without stretching */
+}
+
+.bottom-image {
+  opacity: (10%);
+  width: 1920px;
+  height: 500px;
+  object-fit: cover;
 }

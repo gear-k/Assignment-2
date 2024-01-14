@@ -9,3 +9,14 @@ window.addEventListener("resize", function () {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-black");
+    } else {
+      navbar.classList.remove("bg-black");
+    }
+  });
+});
