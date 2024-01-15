@@ -1,208 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="css/stylesheet.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>InflaGlobe</title>
+  </head>
 
-  <title>Home Page</title>
-</head>
+  <body data-bs-theme="dark">
+    <!-- Off-Canvas Menu -->
+    <!-- CHANGE -->
+    <nav data-bs-theme="dark">
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">InflaGlobe</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item border-bottom">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a class="nav-link" href="#">Map</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a class="nav-link" href="#">Donate</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a class="nav-link" href="#">Impact</a>
+            </li>
 
-<body data-bs-theme="dark">
-  <!-- Off-Canvas Menu -->
-  <!-- CHANGE -->
-  <nav data-bs-theme="dark">
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">InflaGlobe</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">Map</a>
-          </li>
-          <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">Donate</a>
-          </li>
-          <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">Impact</a>
-          </li>
-
-          <div class="d-lg-block">
-            <br />
-            <button type="button" class="btn btn-light">Login</button>
-            <button type="button" class="btn btn-light">Sign Up</button>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <section class="welcome-hero">
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top w-100 py-3" data-bs-theme="dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">InflaGlobe</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Impact</a>
-              </li>
-            </ul>
-            <div class="d-none d-lg-block">
+            <div class="d-lg-block">
+              <br />
               <button type="button" class="btn btn-light">Login</button>
               <button type="button" class="btn btn-light">Sign Up</button>
             </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section id="hero-section" class="container-fluid py-lg-8 pb-5">
-      <div>
-        <div class="ps-0 ps-lg-5 py-5">
-          <h1 class="display-1 fw-bold">Lorem Ipsum Dolor Sit Amet</h1>
-          <h2 class="display-3 fw-bold">consectetur adipiscing elit</h2>
-          <div>
-            <br />
-            <a href="#interactive-map" class="btn btn-light">Explore Map</a>
-            <a href="#get-involved" class="btn btn-light">How You Can Help</a>
-          </div>
+          </ul>
         </div>
       </div>
-    </section>
-  </section>
-
-  <!-- main contents -->
-  <main>
-    <section class="container-fluid">
-      <div class="container-lg py-lg-8 py-5">
-        <div class="row align-items-center">
-          <div class="col-sm">
-            <h2>Ryan Sim Ze Ying</h2>
-            <p>
-              To illuminate the financial landscape by providing
-              comprehensive, real-time inflation statistics. We believe in
-              empowering individuals, businesses, and policymakers with
-              accurate data to foster economic stability and informed
-              decision-making worldwide.
-            </p>
+    </nav>
+    <section class="welcome-hero">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg fixed-top w-100 py-3"
+          data-bs-theme="dark"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#">InflaGlobe</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto align-items-lg-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Donate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Impact</a>
+                </li>
+              </ul>
+              <div class="d-none d-lg-block">
+                <button type="button" class="btn btn-light">Login</button>
+                <button type="button" class="btn btn-light">Sign Up</button>
+              </div>
+            </div>
           </div>
-          <div class="col-sm pt-5 pt-lg-0">
-            <h2>Our Vision</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec
-              egestas ante. Praesent finibus ut odio in faucibus. Donec sed
-              velit turpis. Nullam porttitor mauris eget auctor euismod.
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia curae; Nulla eleifend dignissim gravida.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center pb-5" style="margin-bottom: 20px">
-        <button type="button" class="btn btn-primary btn-lg">
-          Learn More
-        </button>
-      </div>
-    </section>
-    <section class="container-fluid text-black" style="background-color: rgb(255, 255, 255)">
-      <div class="container-lg pt-5">
-        <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
-        <div class="row align-items-center">
-          <div class="col-12 col-md-6 order-md-2">
-            <img src="images/chicken.jpg" class="img-fluid" alt="just a sample" />
-          </div>
-          <div class="col-12 col-md-6 order-md-1">
-            <h2>Lorem Ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <button type="button" class="btn btn-dark">Learn More</button>
-          </div>
-        </div>
-
-        <!-- Second Row: Image followed by Text on all screen sizes -->
-        <div class="row pt-6 align-items-center pb-5">
-          <div class="col-12 col-md-6">
-            <img src="images/zimbabwe.jpg" class="img-fluid" alt="just a sample" />
-          </div>
-          <div class="col-12 col-md-6">
-            <h2>Lorem Ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <button type="button" class="btn btn-dark">Learn More</button>
+        </nav>
+      </header>
+      <section id="hero-section" class="container-fluid py-lg-8 pb-5">
+        <div>
+          <div class="ps-0 ps-lg-5 py-5">
+            <h1 class="display-1 fw-bold">Lorem Ipsum Dolor Sit Amet</h1>
+            <h2 class="display-3 fw-bold">consectetur adipiscing elit</h2>
+            <div>
+              <br />
+              <a href="#interactive-map" class="btn btn-light">Explore Map</a>
+              <a href="#get-involved" class="btn btn-light">How You Can Help</a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
 
-    <section class="position-relative text-center">
-      <img src="images/inflationlong.jpg" class="img-fluid bottom-image" alt="Below picture" />
-      <div class="position-absolute top-50 start-50 translate-middle fw-bold">
-        <figure>
-          <blockquote class="blockquote fs-1 fw-bold">
-            <p>EOUCH EOUCH EOUCH.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer fw-bold">Sim, R</figcaption>
-        </figure>
+    <!-- main contents -->
+    <main>
+      <section class="container-fluid">
+        <div class="container-lg py-lg-8 py-5">
+          <div class="row align-items-center">
+            <div class="col-sm">
+              <h2>Ryan Sim Ze Ying</h2>
+              <p>
+                To illuminate the financial landscape by providing
+                comprehensive, real-time inflation statistics. We believe in
+                empowering individuals, businesses, and policymakers with
+                accurate data to foster economic stability and informed
+                decision-making worldwide.
+              </p>
+            </div>
+            <div class="col-sm pt-5 pt-sm-0">
+              <h2>Our Vision</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec
+                egestas ante. Praesent finibus ut odio in faucibus. Donec sed
+                velit turpis. Nullam porttitor mauris eget auctor euismod.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Nulla eleifend dignissim gravida.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-center pb-5"
+          style="margin-bottom: 20px"
+        ></div>
+      </section>
+      <section
+        class="container-fluid text-black"
+        style="background-color: rgb(255, 255, 255)"
+      >
+        <div class="container-lg pt-5">
+          <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 order-md-2">
+              <img
+                src="images/chicken.jpg"
+                class="img-fluid fixed-size-image"
+                alt="just a sample"
+              />
+            </div>
+            <div class="col-12 col-md-6 order-md-1">
+              <h2>Lorem Ipsum</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <button type="button" class="btn btn-dark">Learn More</button>
+            </div>
+          </div>
+
+          <!-- Second Row: Image followed by Text on all screen sizes -->
+          <div class="row pt-6 align-items-center pb-5">
+            <div class="col-12 col-md-6">
+              <img
+                src="images/zimbabwe.jpg"
+                class="img-fluid fixed-size-image"
+                alt="just a sample"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <h2>Lorem Ipsum</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <button type="button" class="btn btn-dark">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calltoaction" class="container-fluid bg-success ps-5 py-5">
+        <h1 class="display-1 fw-bold">Take the First Step:</h1>
+        <h1 class="display-1 fw-bold">Be Part of The Change</h1>
+      </section>
+      <div class="container">
+        <footer
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
+        >
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+            </a>
+
+            <p>InflaGlobe &copy; 2024</p>
+            <p>
+              info@inflaglobe.org<br />
+              123 Your Street, Your City, Your Country<br />
+              <span class="custom-underline">(65) 90193819</span>
+            </p>
+          </div>
+
+          <div class="col mb-3"></div>
+          <div class="col mb-3"></div>
+
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column custom-underline">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Social Media</h5>
+            <ul class="nav flex-column custom-underline">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">X</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
-    </section>
-
-    <div class="container">
-      <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">About</a>
-          </li>
-        </ul>
-        <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
-      </footer>
-    </div>
-  </main>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script defer src="js/script.js"></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-</body>
-
+    </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
 </html>
