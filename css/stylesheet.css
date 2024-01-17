@@ -108,3 +108,26 @@ body .offcanvas {
   text-decoration: underline;
   line-height: normal; /* Or adjust this as needed */
 }
+
+.slightly-above-center {
+  transform: translateY(-12%);
+}
+
+.icon-style {
+  font-size: 5rem; /* Adjust the size as needed */
+  margin-bottom: 2rem; /* Adjust this value as needed for spacing */
+}
+
+.form-floating-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Makes sure clicks go through to the input */
+  font-size: 1.5rem;
+  transition: visibility 0.2s; /* Smooth transition for visibility change */
+}
+
+.form-floating .form-control {
+  padding-right: 2.5rem; /* Add padding to make room for the icon */
+}
