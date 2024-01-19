@@ -93,6 +93,10 @@ body .offcanvas {
   padding-bottom: 4rem; /* adjust this value as needed */
 }
 
+.pb-6 {
+  padding-bottom: 4rem;
+}
+
 .custom-text-color {
   color: #000000 !important; /* Replace with your desired color */
 }
@@ -130,4 +134,9 @@ body .offcanvas {
 
 .form-floating .form-control {
   padding-right: 2.5rem; /* Add padding to make room for the icon */
+}
+
+.py-8rem {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
