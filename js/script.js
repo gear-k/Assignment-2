@@ -42,3 +42,8 @@ floatingInputs.forEach((input) => {
   input.addEventListener("focus", (event) => toggleIconVisibility(event, true));
   input.addEventListener("blur", (event) => toggleIconVisibility(event, false));
 });
+
+$("#myCarousel").carousel({
+  interval: 2000, // Time delay between items (in milliseconds)
+  cycle: true, // Loop back to the beginning
+});
