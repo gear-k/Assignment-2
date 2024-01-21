@@ -28,6 +28,11 @@
   color: var(--ghost-white);
   border-style: none;
 }
+
+.btn-darkerblue:hover {
+  background-color: var(--darkerblue);
+  color: var(--gunmetal);
+}
 .bg-emerald {
   background-color: var(--emerald);
 }
