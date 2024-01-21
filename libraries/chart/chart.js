@@ -13,12 +13,12 @@ function createLineChart(data) {
       labels: years,
       datasets: [
         {
-          label: "Consumer Price Index",
+          label: "Consumer Price Index in Singapore",
           data: growthRates,
-          borderColor: "#23ce6b", // Example color
+          borderColor: "#FFFFFF", // Example color
           borderWidth: 2,
           pointBackgroundColor: "#f6f8ff", // Ghost white for legend box
-          pointRadius: 5,
+          pointRadius: 3,
         },
       ],
     },

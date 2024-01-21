@@ -6,8 +6,28 @@
   --purpureus: #a846a0ff;
   --davys-gray: #50514fff;
   --gunmetalfaded: #475252;
+  --skyblue: #8eb6dc;
+  --darkerblue: #1470af;
+  --lightgrey: #eaeaee;
 }
 
+.bg-skyblue {
+  background-color: var(--skyblue);
+}
+
+.bg-lightgrey {
+  background-color: var(--lightgrey);
+}
+
+.bg-darkerblue {
+  background: var(--darkerblue);
+}
+
+.btn-darkerblue {
+  background-color: var(--darkerblue);
+  color: var(--ghost-white);
+  border-style: none;
+}
 .bg-emerald {
   background-color: var(--emerald);
 }
@@ -23,6 +43,12 @@
 .btn-ghostwhite {
   background-color: var(--ghost-white);
   color: var(--gunmetal);
+  border: none;
+}
+
+.btn-ghostwhite:hover {
+  background-color: var(--darkerblue);
+  color: var(--ghost-white);
   border: none;
 }
 
@@ -176,20 +202,6 @@ body .offcanvas {
   margin-bottom: 2rem;
 }
 
-.form-floating-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 1.5rem;
-  transition: visibility 0.2s;
-}
-
-.form-floating .form-control {
-  padding-right: 2.5rem;
-}
-
 .py-8rem {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -223,7 +235,7 @@ body .offcanvas {
 }
 
 .logos {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .logos-padding {
@@ -250,19 +262,4 @@ body .offcanvas {
 .btn-custom:hover {
   color: var(--gunmetal);
   background: var(--ghost-white); /* Use var() for background property */
-}
-
-/* Custom CSS for input underlines */
-.form-floating input.form-control {
-  border: none;
-  border-bottom: 1px solid #ccc; /* Add a 1px solid gray underline */
-  border-radius: 0; /* Remove border-radius if any */
-  background-color: transparent; /* Remove background color */
-  box-shadow: none; /* Remove any box shadow */
-  padding-bottom: 5px; /* Add some padding to create space between input and underline */
-}
-
-/* Style for focused input */
-.form-floating input.form-control:focus {
-  border-color: #007bff; /* Change the underline color on focus (you can use any color you prefer) */
 }

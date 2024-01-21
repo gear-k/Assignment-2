@@ -103,12 +103,18 @@
             </ul>
             <div class="d-none d-lg-block">
               <a href="login.html" class="text-decoration-none">
-                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                <button
+                  type="button"
+                  class="btn btn-darkerblue py-2 px-4 border-0"
+                >
                   Login
                 </button>
               </a>
               <a href="signup.html">
-                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                <button
+                  type="button"
+                  class="btn btn-darkerblue py-2 px-4 border-0"
+                >
                   Sign Up
                 </button>
               </a>
@@ -118,123 +124,126 @@
       </nav>
     </header>
 
-    <main
-      class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center"
-      data-bs-theme="light"
-    >
-      <div class="card bg-white col-12 col-md-8 col-lg-5 p-5 shadow border-0">
-        <div class="card-body">
-          <h1 class="mb-3 fw-normal pb-5 pt-1">Please Login</h1>
-          <form action="" class="">
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Email address</label>
+    <main data-bs-theme="light">
+      <div class="vh-100 d-flex align-items-center justify-content-center">
+        <div class="container-sm">
+          <div class="row g-0 shadow bg-white">
+            <!-- Image Column -->
+            <div class="col-lg-8 d-none d-lg-flex">
+              <img class="w-100" src="images/chicken.jpg" />
             </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control"
-                id="floatingPassword"
-                placeholder="Password"
-              />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <div
-              class="d-flex flex-column flex-md-row justify-content-between pt-2 pb-4 pt-md-3"
-            >
-              <div class="checkbox mb-0 mb-md-3">
-                <label>
-                  <input type="checkbox" value="remember-me" /> Remember me
-                </label>
-              </div>
-              <a href="#" class="d-none d-md-block link-offset-1"
-                >Forgot Your Password?</a
-              >
-            </div>
+            <!-- Form Column -->
+            <div class="col-lg-4 p-5">
+              <form method="post">
+                <h2 class="text-center mb-4">
+                  <strong>Login</strong>
+                </h2>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
 
-            <button class="w-100 btn btn-lg btn-dark" type="submit">
-              Login
-            </button>
-
-            <div class="pt-6">
-              <a href="#" class="link-offset-1">Not a member? Sign up now</a>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="agreeTerms"
+                  />
+                  <label class="form-check-label" for="agreeTerms"
+                    >I agree to the license terms.</label
+                  >
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+                <p class="text-center mt-3">
+                  <a href="#" class="already"
+                    >You already have an account? Login here.</a
+                  >
+                </p>
+              </form>
             </div>
-            <!-- New container for "Forgot Your Password?" link for medium and smaller screens -->
-            <div class="d-flex d-md-none justify-content-center pt-0 pt-md-3">
-              <a href="#">Forgot Your Password?</a>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </main>
 
-    <div class="container">
-      <footer
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
-      >
-        <div class="col mb-3">
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
-          >
-          </a>
+    <div class="container-fluid bg-skyblue text-ghost-white">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+            </a>
+            <address>
+              <p>InflaGlobe &copy; 2024</p>
+              <p>
+                info@inflaglobe.org<br />
+                123 Your Street, Your City, Your Country<br />
+                <span class="custom-underline">(65) 90193819</span>
+              </p>
+            </address>
+          </div>
 
-          <p>InflaGlobe &copy; 2024</p>
-          <p>
-            info@inflaglobe.org<br />
-            123 Your Street, Your City, Your Country<br />
-            <span class="custom-underline">(65) 90193819</span>
-          </p>
-        </div>
+          <div class="col mb-3"></div>
+          <div class="col mb-3"></div>
 
-        <div class="col mb-3"></div>
-        <div class="col mb-3"></div>
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">About</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Social Media</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Instagram</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">X</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Facebook</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">TikTok</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+          <div class="col mb-3">
+            <h5>Social Media</h5>
+            <ul class="nav flex-column link-offset-1">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">X</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
