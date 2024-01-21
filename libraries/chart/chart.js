@@ -15,20 +15,43 @@ function createLineChart(data) {
         {
           label: "Consumer Price Index",
           data: growthRates,
-          borderColor: "rgba(255, 99, 132, 1)", // Red color
-          backgroundColor: "rgba(255, 99, 132, 0.2)", // Light red background
+          borderColor: "#23ce6b", // Example color
           borderWidth: 2,
-          pointBackgroundColor: "rgba(255, 99, 132, 1)", // Red color for points
+          pointBackgroundColor: "#f6f8ff", // Ghost white for legend box
           pointRadius: 5,
         },
       ],
     },
     options: {
-      responsive: true, // Make the chart responsive
-      maintainAspectRatio: false, // Allow the chart to resize in both width and height
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true,
+          ticks: {
+            color: "#f6f8ff", // Change y-axis tick color to ghost white
+          },
+        },
+        x: {
+          ticks: {
+            color: "#f6f8ff", // Change x-axis tick color to ghost white
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: "#f6f8ff", // Ghost white text for legend labels
+            boxWidth: 12, // Adjust the size of the color box if needed
+            padding: 20, // Adjust the padding around the color box if needed
+            usePointStyle: true, // Ensures the legend uses the same style as the points
+          },
+        },
+        tooltip: {
+          backgroundColor: "#f6f8ff", // Change tooltip background color to ghost white
+          titleColor: "#272d2d", // For contrast, we use gunmetal color for the title
+          bodyColor: "#272d2d", // For contrast, we use gunmetal color for the body text
+          boxPadding: 6, // Optional: you can adjust padding inside the tooltip box
         },
       },
     },

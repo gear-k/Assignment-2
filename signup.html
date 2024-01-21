@@ -62,8 +62,10 @@
       </div>
     </nav>
     <header>
-      <!-- actual navigation menu -->
-      <nav class="navbar navbar-expand-lg w-100 py-3" data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-lg fixed-top w-100 py-3"
+        data-bs-theme="light"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">InflaGlobe</a>
           <button
@@ -76,17 +78,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center">
+            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Map</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="about.html"
-                  >About</a
-                >
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Donate</a>
@@ -95,20 +97,27 @@
                 <a class="nav-link" href="#">Impact</a>
               </li>
             </ul>
-            <div class="">
-              <button type="button" class="btn btn-light">Login</button>
-              <button type="button" class="btn btn-light">Sign Up</button>
+            <div class="d-none d-lg-block">
+              <a href="login.html" class="text-decoration-none">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Login
+                </button>
+              </a>
+              <a href="signup.html">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Sign Up
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </nav>
     </header>
+
     <main
       class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center"
     >
-      <div
-        class="card bg-transparent col-12 col-md-8 col-lg-6 p-5 slightly-above-center"
-      >
+      <div class="card bg-white col-12 col-md-8 col-lg-6 p-5 shadow border-0">
         <div class="card-body">
           <h1 class="mb-3 fw-normal pb-3 pt-1">Sign Up</h1>
           <form action="">
@@ -126,9 +135,6 @@
                 placeholder="Name"
               />
               <label for="floatingName">Name</label>
-              <div class="form-floating-icon">
-                <i class="bi bi-person-fill"></i>
-              </div>
             </div>
 
             <!-- Input for Email with an icon -->
@@ -140,9 +146,6 @@
                 placeholder="name@example.com"
               />
               <label for="floatingEmail">Email</label>
-              <div class="form-floating-icon">
-                <i class="bi bi-envelope-fill"></i>
-              </div>
             </div>
 
             <!-- Input for Username with an icon -->
@@ -154,9 +157,6 @@
                 placeholder="Username"
               />
               <label for="floatingUsername">Username</label>
-              <div class="form-floating-icon">
-                <i class="bi bi-person-circle"></i>
-              </div>
             </div>
 
             <!-- Input for Password with an icon -->
@@ -168,16 +168,10 @@
                 placeholder="Password"
               />
               <label for="floatingPassword">Password</label>
-              <div class="form-floating-icon">
-                <i class="bi bi-lock-fill"></i>
-              </div>
             </div>
             <div class="pt-4">
               <!-- Sign Up button -->
-              <button
-                class="w-100 btn btn-lg btn-outline-light mb-2"
-                type="submit"
-              >
+              <button class="w-100 btn btn-lg btn-dark mb-2" type="submit">
                 Sign Up
               </button>
 
@@ -185,7 +179,7 @@
               <div class="text-center mb-2">or</div>
 
               <!-- Sign Up with Google button -->
-              <button class="w-100 btn btn-lg btn-outline-light" type="button">
+              <button class="w-100 btn btn-lg btn-dark" type="button">
                 <i class="bi bi-google me-2"></i>Sign Up With Google
               </button>
             </div>

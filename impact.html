@@ -65,8 +65,10 @@
       </div>
     </nav>
     <header>
-      <!-- actual navigation menu -->
-      <nav class="navbar navbar-expand-lg w-100 py-3" data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-lg fixed-top w-100 py-3"
+        data-bs-theme="light"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">InflaGlobe</a>
           <button
@@ -79,17 +81,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center">
+            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="map.html">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="about.html"
-                  >About</a
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
                 >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Donate</a>
@@ -98,149 +100,158 @@
                 <a class="nav-link" href="#">Impact</a>
               </li>
             </ul>
-            <div class="">
-              <a href="login.html"
-                ><button type="button" class="btn btn-light">Login</button></a
-              >
-              <a href="signup.html"
-                ><button type="button" class="btn btn-light">Sign Up</button></a
-              >
+            <div class="d-none d-lg-block">
+              <a href="login.html" class="text-decoration-none">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Login
+                </button>
+              </a>
+              <a href="signup.html">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Sign Up
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="container text-center py-6">
+    <section class="container py-lg-8 pb-5">
+      <div class="row align-items-center">
+        <!-- Add align-items-center to vertically center content -->
+        <!-- Text Content Side -->
+        <div class="col-lg-7 ps-lg-5 custom-padding">
+          <h1 class="display-1">Inflation and it's Consequences</h1>
+        </div>
+      </div>
+      <div class="container pb-6">
+        <h6 class="display-6">Lorem Ipsum Dolor Sit Amet</h6>
+        <img
+          src="images/hyperinflation.jpg"
+          alt="inflation"
+          class="img-fluid"
+        />
+      </div>
+    </section>
+    <section class="container border-top py-6">
+      <div class="container-lg pt-6">
+        <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
         <div class="row align-items-center">
-          <div class="col display-1">The Impacts of Inflation</div>
-          <div class="col">
+          <div class="col-12 col-md-6 order-md-2">
             <img
-              src="images/inflationai.png"
-              class="img-fluid"
-              alt="inflationai"
+              src="images/chicken.jpg"
+              class="img-fluid fixed-size-image"
+              alt="just a sample"
             />
           </div>
-        </div>
-      </section>
-      <section class="container border-top py-6">
-        <div class="container-lg pt-6">
-          <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-md-2">
-              <img
-                src="images/chicken.jpg"
-                class="img-fluid fixed-size-image"
-                alt="just a sample"
-              />
-            </div>
-            <div class="col-12 col-md-6 order-md-1">
-              <h2>Lorem Ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <!-- Second Row: Image followed by Text on all screen sizes -->
-          <div class="row align-items-center py-8rem">
-            <div class="col-12 col-md-6">
-              <img
-                src="images/zimbabwe.jpg"
-                class="img-fluid fixed-size-image"
-                alt="just a sample"
-              />
-            </div>
-            <div class="col-12 col-md-6">
-              <h2>Lorem Ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-          <!-- Third Row: Text followed by Image on large screens, Image above Text on smaller screens -->
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-md-2">
-              <img
-                src="images/chicken.jpg"
-                class="img-fluid fixed-size-image"
-                alt="just a sample"
-              />
-            </div>
-            <div class="col-12 col-md-6 order-md-1 pb-6">
-              <h2>Lorem Ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
+          <div class="col-12 col-md-6 order-md-1">
+            <h2>Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-    <div class="container">
-      <footer
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
-      >
-        <div class="col mb-3">
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
-          >
-          </a>
 
-          <p>InflaGlobe &copy; 2024</p>
-          <p>
-            info@inflaglobe.org<br />
-            123 Your Street, Your City, Your Country<br />
-            <span class="custom-underline">(65) 90193819</span>
-          </p>
+        <!-- Second Row: Image followed by Text on all screen sizes -->
+        <div class="row align-items-center py-8rem">
+          <div class="col-12 col-md-6">
+            <img
+              src="images/zimbabwe.jpg"
+              class="img-fluid fixed-size-image"
+              alt="just a sample"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
-
-        <div class="col mb-3"></div>
-        <div class="col mb-3"></div>
-
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
-            </li>
-          </ul>
+        <!-- Third Row: Text followed by Image on large screens, Image above Text on smaller screens -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 order-md-2">
+            <img
+              src="images/chicken.jpg"
+              class="img-fluid fixed-size-image"
+              alt="just a sample"
+            />
+          </div>
+          <div class="col-12 col-md-6 order-md-1 pb-6">
+            <h2>Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col mb-3">
-          <h5>Social Media</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Instagram</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">X</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Facebook</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">TikTok</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+    <div class="container-fluid bg-gunmetal text-ghost-white">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+            </a>
+            <address>
+              <p>InflaGlobe &copy; 2024</p>
+              <p>
+                info@inflaglobe.org<br />
+                123 Your Street, Your City, Your Country<br />
+                <span class="custom-underline">(65) 90193819</span>
+              </p>
+            </address>
+          </div>
+
+          <div class="col mb-3"></div>
+          <div class="col mb-3"></div>
+
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Social Media</h5>
+            <ul class="nav flex-column link-offset-1">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">X</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="js/script.js"></script>

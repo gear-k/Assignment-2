@@ -55,10 +55,10 @@
             <div class="d-lg-block">
               <br />
               <a href="login.html"
-                ><button type="button" class="btn btn-light">Login</button></a
+                ><button type="button" class="btn">Login</button></a
               >
               <a href="signup.html"
-                ><button type="button" class="btn btn-light">Sign Up</button></a
+                ><button type="button" class="btn">Sign Up</button></a
               >
             </div>
           </ul>
@@ -66,8 +66,10 @@
       </div>
     </nav>
     <header>
-      <!-- actual navigation menu -->
-      <nav class="navbar navbar-expand-lg w-100 py-3" data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-lg fixed-top w-100 py-3"
+        data-bs-theme="light"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">InflaGlobe</a>
           <button
@@ -80,17 +82,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center">
+            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Map</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="about.html"
-                  >About</a
-                >
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Donate</a>
@@ -99,13 +101,17 @@
                 <a class="nav-link" href="#">Impact</a>
               </li>
             </ul>
-            <div class="">
-              <a href="login.html"
-                ><button type="button" class="btn btn-light">Login</button></a
-              >
-              <a href="signup.html"
-                ><button type="button" class="btn btn-light">Sign Up</button></a
-              >
+            <div class="d-none d-lg-block">
+              <a href="login.html" class="text-decoration-none">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Login
+                </button>
+              </a>
+              <a href="signup.html">
+                <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                  Sign Up
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -114,13 +120,12 @@
 
     <main
       class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center"
+      data-bs-theme="light"
     >
-      <div
-        class="card bg-transparent col-12 col-md-8 col-lg-6 p-5 slightly-above-center"
-      >
+      <div class="card bg-white col-12 col-md-8 col-lg-5 p-5 shadow border-0">
         <div class="card-body">
           <h1 class="mb-3 fw-normal pb-5 pt-1">Please Login</h1>
-          <form action="">
+          <form action="" class="">
             <div class="form-floating mb-3">
               <input
                 type="email"
@@ -140,24 +145,25 @@
               <label for="floatingPassword">Password</label>
             </div>
             <div
-              class="d-flex flex-column flex-md-row justify-content-between pt-2 pb-4 pt-md-1"
+              class="d-flex flex-column flex-md-row justify-content-between pt-2 pb-4 pt-md-3"
             >
               <div class="checkbox mb-0 mb-md-3">
                 <label>
                   <input type="checkbox" value="remember-me" /> Remember me
                 </label>
               </div>
-              <a href="#" class="d-none d-md-block">Forgot Your Password?</a>
+              <a href="#" class="d-none d-md-block link-offset-1"
+                >Forgot Your Password?</a
+              >
             </div>
 
-            <button class="w-100 btn btn-lg btn-primary" type="submit">
+            <button class="w-100 btn btn-lg btn-dark" type="submit">
               Login
             </button>
 
-            <div class="py-2">
-              <a href="#">Not a member? Sign up now</a>
+            <div class="pt-6">
+              <a href="#" class="link-offset-1">Not a member? Sign up now</a>
             </div>
-
             <!-- New container for "Forgot Your Password?" link for medium and smaller screens -->
             <div class="d-flex d-md-none justify-content-center pt-0 pt-md-3">
               <a href="#">Forgot Your Password?</a>
@@ -166,6 +172,7 @@
         </div>
       </div>
     </main>
+
     <div class="container">
       <footer
         class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"

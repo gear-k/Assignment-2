@@ -1,20 +1,84 @@
+:root {
+  /* CSS HEX */
+  --emerald: #23ce6bff;
+  --gunmetal: #272d2dff;
+  --ghost-white: #f6f8ffff;
+  --purpureus: #a846a0ff;
+  --davys-gray: #50514fff;
+  --gunmetalfaded: #475252;
+}
+
+.bg-emerald {
+  background-color: var(--emerald);
+}
+
+.bg-gunmetal {
+  background-color: var(--gunmetal);
+}
+
+.bg-ghost-white {
+  background-color: var(--ghost-white);
+}
+
+.btn-ghostwhite {
+  background-color: var(--ghost-white);
+  color: var(--gunmetal);
+  border: none;
+}
+
+.bg-purpureus {
+  background-color: var(--purpureus);
+}
+
+.bg-davys-gray {
+  background-color: var(--davys-gray);
+}
+
+.text-emerald {
+  color: var(--emerald);
+}
+
+.text-gunmetal {
+  color: var(--gunmetal);
+}
+
+.text-ghost-white {
+  color: var(--ghost-white) !important;
+}
+
+.text-purpureus {
+  color: var(--purpureus);
+}
+
+.text-davys-gray {
+  color: var(--davys-gray);
+}
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--ghost-white);
 }
 
 body .offcanvas {
   max-width: 20rem;
 }
+
+.active-style {
+  color: #ff0000; /* Choose a color that stands out */
+  /* Additional styling if needed */
+}
+
 .navbar-brand img {
   max-height: 50px;
   width: auto;
 }
+
 .nav-link {
   font-size: 1.2rem;
 }
+
 .nav-item {
   margin-right: 20px;
 }
+
 .nav-item:last-child {
   margin: 0;
 }
@@ -23,36 +87,14 @@ body .offcanvas {
   padding-top: 200px;
 }
 
+.about-hero,
 .welcome-hero {
   position: relative;
   z-index: 1;
 }
 
+.about-hero::before,
 .welcome-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0) 90%,
-      rgba(0, 0, 0, 1) 100%
-    ),
-    url("../images/hyperinflation.jpg") no-repeat center/cover;
-  filter: opacity(45%); /* Apply grayscale here */
-  z-index: -1;
-}
-
-.about-hero {
-  position: relative;
-  z-index: 1;
-}
-
-.about-hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -65,12 +107,24 @@ body .offcanvas {
       rgba(0, 0, 0, 0) 50%
     ),
     url("../images/hyperinflation.jpg") no-repeat center/cover;
-  filter: opacity(45%); /* Apply grayscale here */
+  filter: opacity(45%);
   z-index: -1;
 }
 
+/* Adjusted to match the more specific welcome-hero gradient */
+.welcome-hero::before {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 90%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 .btn {
-  border-radius: 0; /* Removes the border-radius */
+  border-radius: 0;
 }
 
 .navbar {
@@ -78,19 +132,19 @@ body .offcanvas {
 }
 
 .text-box {
-  background-color: white; /* Or any color you prefer */
+  background-color: white;
   padding: 20px;
-  margin-top: -100px; /* Adjust this value to control overlap */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  margin-top: -100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pt-6 {
+.pt-6,
+.py-6 {
   padding-top: 4rem;
 }
 
 .py-6 {
-  padding-top: 4rem; /* or any value you prefer */
-  padding-bottom: 4rem; /* adjust this value as needed */
+  padding-bottom: 4rem;
 }
 
 .pb-6 {
@@ -98,11 +152,11 @@ body .offcanvas {
 }
 
 .custom-text-color {
-  color: #000000 !important; /* Replace with your desired color */
+  color: #000000 !important;
 }
 
 .bottom-image {
-  opacity: (10%);
+  opacity: 10%;
   width: 1920px;
   height: 500px;
   object-fit: cover;
@@ -110,7 +164,7 @@ body .offcanvas {
 
 .custom-underline {
   text-decoration: underline;
-  line-height: normal; /* Or adjust this as needed */
+  line-height: normal;
 }
 
 .slightly-above-center {
@@ -118,25 +172,97 @@ body .offcanvas {
 }
 
 .icon-style {
-  font-size: 5rem; /* Adjust the size as needed */
-  margin-bottom: 2rem; /* Adjust this value as needed for spacing */
+  font-size: 5rem;
+  margin-bottom: 2rem;
 }
 
 .form-floating-icon {
   position: absolute;
   top: 50%;
-  right: 16px;
+  left: 16px;
   transform: translateY(-50%);
-  pointer-events: none; /* Makes sure clicks go through to the input */
+  pointer-events: none;
   font-size: 1.5rem;
-  transition: visibility 0.2s; /* Smooth transition for visibility change */
+  transition: visibility 0.2s;
 }
 
 .form-floating .form-control {
-  padding-right: 2.5rem; /* Add padding to make room for the icon */
+  padding-right: 2.5rem;
 }
 
 .py-8rem {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+/* The following are new or conflicting rules that have been resolved */
+.custom-padding {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+/* The .py-* classes have been standardized according to the first code snippet */
+.py-7 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-8 {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.py-9 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.py-10 {
+  padding-top: 10.5rem;
+  padding-bottom: 10.5rem;
+}
+
+.logos {
+  font-size: 5rem;
+}
+
+.logos-padding {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.custom-img-size {
+  max-width: 65%; /* or any percentage or fixed width you desire */
+  height: auto; /* maintain aspect ratio */
+}
+
+.btn-ghost-white {
+  color: var(--gunmetal);
+  background: var(--ghost-white);
+}
+
+.btn-custom {
+  color: var(--ghost-white);
+  background: var(--gunmetal);
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.btn-custom:hover {
+  color: var(--gunmetal);
+  background: var(--ghost-white); /* Use var() for background property */
+}
+
+/* Custom CSS for input underlines */
+.form-floating input.form-control {
+  border: none;
+  border-bottom: 1px solid #ccc; /* Add a 1px solid gray underline */
+  border-radius: 0; /* Remove border-radius if any */
+  background-color: transparent; /* Remove background color */
+  box-shadow: none; /* Remove any box shadow */
+  padding-bottom: 5px; /* Add some padding to create space between input and underline */
+}
+
+/* Style for focused input */
+.form-floating input.form-control:focus {
+  border-color: #007bff; /* Change the underline color on focus (you can use any color you prefer) */
 }

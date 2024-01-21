@@ -9,6 +9,10 @@
     />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="css/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <title>InflaGlobe</title>
   </head>
 
@@ -58,11 +62,11 @@
         </div>
       </div>
     </nav>
-    <section class="welcome-hero">
+    <section>
       <header>
         <nav
           class="navbar navbar-expand-lg fixed-top w-100 py-3"
-          data-bs-theme="dark"
+          data-bs-theme="light"
         >
           <div class="container">
             <a class="navbar-brand" href="#">InflaGlobe</a>
@@ -76,7 +80,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto align-items-lg-center">
+              <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
                 <li class="nav-item">
                   <a
                     class="nav-link active"
@@ -99,37 +103,90 @@
                 </li>
               </ul>
               <div class="d-none d-lg-block">
-                <a href="login.html" class="text-decoration-none"
-                  ><button type="button" class="btn btn-light">Login</button></a
-                >
-                <a href="signup.html"
-                  ><button type="button" class="btn btn-light">
+                <a href="login.html" class="text-decoration-none">
+                  <button type="button" class="btn btn-dark py-2 px-4 border-0">
+                    Login
+                  </button>
+                </a>
+                <a href="signup.html">
+                  <button type="button" class="btn btn-dark py-2 px-4 border-0">
                     Sign Up
-                  </button></a
-                >
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </nav>
       </header>
-      <section id="hero-section" class="container-fluid py-lg-8 pb-5">
-        <div>
-          <div class="ps-0 ps-lg-5 py-5">
-            <h1 class="display-1 fw-bold">Lorem Ipsum Dolor Sit Amet</h1>
-            <h2 class="display-3 fw-bold">consectetur adipiscing elit</h2>
+      <section class="container py-lg-8 pb-5">
+        <div class="row align-items-center">
+          <!-- Add align-items-center to vertically center content -->
+          <!-- Text Content Side -->
+          <div class="col-lg-6 ps-4 ps-lg-5 custom-padding">
+            <h1 class="display-1">
+              Lorem Ipsum Dolor Sit Amet consectetur adipiscing elit
+            </h1>
+
             <div>
               <br />
-              <a href="#interactive-map" class="btn btn-light">Explore Map</a>
-              <a href="#get-involved" class="btn btn-light">How You Can Help</a>
+              <a href="#interactive-map" class="btn btn-dark py-3 px-4"
+                >Explore Map</a
+              >
+              <a href="#get-involved" class="btn btn-dark py-3 px-4"
+                >How You Can Help</a
+              >
             </div>
+          </div>
+
+          <!-- Image Side -->
+          <div class="col-lg-6">
+            <img
+              src="images/inflationai.png"
+              alt="Descriptive Image Text"
+              class="custom-img-size mx-auto d-block"
+            />
           </div>
         </div>
       </section>
+      <div class="container text-center pb-6">
+        <div class="row">
+          <div class="col">
+            <div class="card bg-gunmetal text-ghost-white">
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card bg-gunmetal text-ghost-white">
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card bg-gunmetal text-ghost-white">
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- main contents -->
     <main>
-      <section class="container-fluid">
+      <section class="container-fluid bg-gunmetal text-ghost-white">
         <div class="container-lg py-lg-8 py-5">
           <div class="row align-items-center">
             <div class="col-sm">
@@ -152,10 +209,7 @@
           style="margin-bottom: 20px"
         ></div>
       </section>
-      <section
-        class="container-fluid text-black"
-        style="background-color: rgb(255, 255, 255)"
-      >
+      <section class="container-fluid text-black">
         <div class="container-lg pt-5">
           <!-- First Row: Text followed by Image on large screens, Image above Text on smaller screens -->
           <div class="row align-items-center">
@@ -172,10 +226,11 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <button type="button" class="btn btn-dark">Learn More</button>
+              <button type="button" class="btn btn-dark px-4 py-2">
+                Learn More
+              </button>
             </div>
           </div>
-          c
 
           <!-- Second Row: Image followed by Text on all screen sizes -->
           <div class="row pt-6 align-items-center pb-5">
@@ -192,79 +247,89 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <button type="button" class="btn btn-dark">Learn More</button>
+              <button type="button" class="btn btn-dark px-4 py-2">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="calltoaction" class="container-fluid bg-success ps-5 py-5">
-        <h1 class="display-1 fw-bold">Take the First Step:</h1>
-        <h1 class="display-1 fw-bold">Be Part of The Change</h1>
+      <section id="calltoaction" class="container-fluid text-center pt-6">
+        <h4 class="display-5">Supported By</h4>
+      </section>
+      <section class="container text-center logos pb-5 pt-3">
+        <i class="bi bi-nvidia p-5"></i>
+        <i class="bi bi-amd p-5"></i>
+        <i class="bi bi-amazon p-5"></i>
+        <i class="bi bi-apple p-5"></i>
+        <i class="bi bi-wechat p-5"></i>
       </section>
     </main>
-    <div class="container">
-      <footer
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
-      >
-        <div class="col mb-3">
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
-          >
-          </a>
+    <div class="container-fluid bg-gunmetal text-ghost-white">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+            </a>
+            <address>
+              <p>InflaGlobe &copy; 2024</p>
+              <p>
+                info@inflaglobe.org<br />
+                123 Your Street, Your City, Your Country<br />
+                <span class="custom-underline">(65) 90193819</span>
+              </p>
+            </address>
+          </div>
 
-          <p>InflaGlobe &copy; 2024</p>
-          <p>
-            info@inflaglobe.org<br />
-            123 Your Street, Your City, Your Country<br />
-            <span class="custom-underline">(65) 90193819</span>
-          </p>
-        </div>
+          <div class="col mb-3"></div>
+          <div class="col mb-3"></div>
 
-        <div class="col mb-3"></div>
-        <div class="col mb-3"></div>
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">About</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Social Media</h5>
-          <ul class="nav flex-column custom-underline">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Instagram</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">X</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Facebook</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">TikTok</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+          <div class="col mb-3">
+            <h5>Social Media</h5>
+            <ul class="nav flex-column link-offset-1">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">X</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link text-ghost-white p-0">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="js/script.js"></script>
     <script src="libraries/chart/chart.js"></script>
