@@ -15,9 +15,9 @@ function createLineChart(data) {
         {
           label: "Consumer Price Index in Singapore",
           data: growthRates,
-          borderColor: "#FFFFFF", // Example color
+          borderColor: "#1470af", // Example color
           borderWidth: 2,
-          pointBackgroundColor: "#f6f8ff", // Ghost white for legend box
+          pointBackgroundColor: "#1470af", // Ghost white for legend box
           pointRadius: 3,
         },
       ],
@@ -29,26 +29,26 @@ function createLineChart(data) {
         y: {
           beginAtZero: true,
           ticks: {
-            color: "#f6f8ff", // Change y-axis tick color to ghost white
+            color: "#1470af", // Change y-axis tick color to ghost white
           },
         },
         x: {
           ticks: {
-            color: "#f6f8ff", // Change x-axis tick color to ghost white
+            color: "#1470af", // Change x-axis tick color to ghost white
           },
         },
       },
       plugins: {
         legend: {
           labels: {
-            color: "#f6f8ff", // Ghost white text for legend labels
+            color: "#1470af", // Ghost white text for legend labels
             boxWidth: 12, // Adjust the size of the color box if needed
             padding: 20, // Adjust the padding around the color box if needed
             usePointStyle: true, // Ensures the legend uses the same style as the points
           },
         },
         tooltip: {
-          backgroundColor: "#f6f8ff", // Change tooltip background color to ghost white
+          backgroundColor: "#1470af", // Change tooltip background color to ghost white
           titleColor: "#272d2d", // For contrast, we use gunmetal color for the title
           bodyColor: "#272d2d", // For contrast, we use gunmetal color for the body text
           boxPadding: 6, // Optional: you can adjust padding inside the tooltip box

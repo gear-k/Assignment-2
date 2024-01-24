@@ -215,7 +215,7 @@ body .offcanvas {
 /* The following are new or conflicting rules that have been resolved */
 .custom-padding {
   padding-top: 15rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
 }
 
 /* The .py-* classes have been standardized according to the first code snippet */
