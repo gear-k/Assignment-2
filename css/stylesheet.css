@@ -268,3 +268,12 @@ body .offcanvas {
   color: var(--gunmetal);
   background: var(--ghost-white); /* Use var() for background property */
 }
+
+.image-gallery {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.image-gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
