@@ -6,13 +6,18 @@
   --purpureus: #a846a0ff;
   --davys-gray: #50514fff;
   --gunmetalfaded: #475252;
-  --skyblue: #8eb6dc;
-  --darkerblue: #1470af;
+  --darkblue: #151e3f;
+  --darkerblue: #151e3f;
   --lightgrey: #eaeaee;
+  --darkcolor1: #030027;
 }
 
-.bg-skyblue {
-  background-color: var(--skyblue);
+.bg-darkcolor1 {
+  background-color: var(--darkcolor1);
+}
+
+.bg-darkblue {
+  background-color: var(--darkblue);
 }
 
 .bg-lightgrey {
@@ -276,4 +281,19 @@ body .offcanvas {
 
 .image-gallery::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
+}
+
+.indexvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: grayscale(100%);
+}
+
+.footer {
+  background: var(--darkblue);
 }

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".navbar .btn"); // Select all buttons
 
     if (window.scrollY > 125) {
-      navbar.classList.add("bg-skyblue");
+      navbar.classList.add("bg-darkblue");
       // Change navbar links to white
       navbarLinks.forEach(function (link) {
         link.classList.add("text-ghost-white");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navbarBrand.classList.add("text-ghost-white"); // Change navbar-brand to white
       buttons.forEach((button) => button.classList.add("btn-ghostwhite")); // Add btn-ghostwhite to buttons
     } else {
-      navbar.classList.remove("bg-skyblue");
+      navbar.classList.remove("bg-darkblue");
       // Revert navbar links to original color
       navbarLinks.forEach(function (link) {
         link.classList.remove("text-ghost-white");
