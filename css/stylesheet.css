@@ -223,6 +223,9 @@ body .offcanvas {
   padding-bottom: 10rem;
 }
 
+.pt-7 {
+  padding-top: 6rem;
+}
 /* The .py-* classes have been standardized according to the first code snippet */
 .py-7 {
   padding-top: 6rem;
@@ -296,4 +299,17 @@ body .offcanvas {
 
 .footer {
   background: var(--darkblue);
+}
+
+.quiz-card {
+  margin-bottom: 1rem;
+  background: var(--darkblue);
+  color: var(--ghost-white);
+}
+.quiz-card .card-body {
+  font-size: 1.25rem; /* Larger font size */
+}
+.question {
+  font-size: 1.5rem; /* Even larger font size for questions */
+  font-weight: bold;
 }
