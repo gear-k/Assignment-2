@@ -12,6 +12,10 @@
   --darkcolor1: #030027;
 }
 
+.border-darkcolor1 {
+  border: 1px solid var(--darkcolor1) !important;
+}
+
 .bg-darkcolor1 {
   background-color: var(--darkcolor1);
 }
@@ -119,44 +123,73 @@ body .offcanvas {
   margin: 0;
 }
 
-#hero-section {
-  padding-top: 200px;
+.custom-font-size-1 {
+  font-size: 5rem;
 }
 
-.about-hero,
-.welcome-hero {
+.custom-font-size-2 {
+  font-size: 4.5rem;
+}
+
+.custom-font-size-3 {
+  font-size: 4rem;
+}
+
+.custom-font-size-4 {
+  font-size: 3.5rem;
+}
+
+.custom-font-size-5 {
+  font-size: 3rem;
+}
+
+.custom-font-size-6 {
+  font-size: 2.5rem;
+}
+
+.heroimage {
   position: relative;
-  z-index: 1;
+  min-height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents the image from exceeding the hero section */
 }
 
-.about-hero::before,
-.welcome-hero::before {
+.heroimage-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without squeezing the image */
+  object-position: right center; /* Focus on the right side of the image */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  filter: grayscale(60%); /* Apply grayscale filter to the image */
+}
+
+.display-1 {
+  font-weight: bolder !important;
+}
+/* Apply the blue overlay */
+.heroimage::after {
   content: "";
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%; /* Apply overlay to the left half only */
   height: 100%;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 50%
-    ),
-    url("../images/hyperinflation.jpg") no-repeat center/cover;
-  filter: opacity(45%);
-  z-index: -1;
+  z-index: 1; /* Above the image, below the content */
 }
 
-/* Adjusted to match the more specific welcome-hero gradient */
-.welcome-hero::before {
-  height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0) 90%,
-    rgba(0, 0, 0, 1) 100%
-  );
+/* Make sure the content of .heroimage is above the pseudo-elements */
+.heroimage > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make sure the content of .heroimage is above the pseudo-elements */
+.heroimage > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .btn {
@@ -165,13 +198,6 @@ body .offcanvas {
 
 .navbar {
   transition: background-color 0.5s;
-}
-
-.text-box {
-  background-color: white;
-  padding: 20px;
-  margin-top: -100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pt-6,
@@ -286,17 +312,6 @@ body .offcanvas {
   display: none; /* Chrome, Safari, and Opera */
 }
 
-.indexvideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  filter: grayscale(100%);
-}
-
 .footer {
   background: var(--darkblue);
 }
@@ -312,4 +327,30 @@ body .offcanvas {
 .question {
   font-size: 1.5rem; /* Even larger font size for questions */
   font-weight: bold;
+}
+
+.custom-card {
+  border-radius: 20px; /* Rounded corners */
+  border: 2px solid #e1e1e1; /* Grey border */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+.custom-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+.card-body {
+  text-align: center; /* Center the text */
+}
+.card-title {
+  font-size: 6rem; /* Large number font size */
+  color: var(--darkblue); /* Dark grey color for the number */
+}
+.card-text {
+  color: #666; /* Lighter grey color for the text */
+  font-size: 1rem;
+}
+
+.font-weight-extra-bold {
+  font-weight: 400 !important; /* You can use 700 for bold or 900 for extra bold, depending on what you need */
 }
