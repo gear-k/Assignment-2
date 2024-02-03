@@ -6,44 +6,43 @@
   --purpureus: #a846a0ff;
   --davys-gray: #50514fff;
   --gunmetalfaded: #475252;
-  --darkblue: #151e3f;
-  --darkerblue: #151e3f;
+  --spacecadet: #151e3f;
+  --oxfordblue: #030027;
   --lightgrey: #eaeaee;
-  --darkcolor1: #030027;
 }
 
-.border-darkcolor1 {
-  border: 1px solid var(--darkcolor1) !important;
+.border-oxfordblue {
+  border: 1px solid var(--oxfordblue) !important;
 }
 
 .border-bottom {
-  border-color: var(--darkcolor1) !important;
+  border-color: var(--oxfordblue) !important;
 }
 
-.bg-darkcolor1 {
-  background-color: var(--darkcolor1);
+.bg-oxfordblue {
+  background-color: var(--oxfordblue);
 }
 
-.bg-darkblue {
-  background-color: var(--darkblue);
+.bg-spacecadet {
+  background-color: var(--spacecadet);
 }
 
 .bg-lightgrey {
   background-color: var(--lightgrey);
 }
 
-.bg-darkerblue {
-  background: var(--darkerblue);
+.bg-spacecadet {
+  background: var(--spacecadet);
 }
 
-.btn-darkerblue {
-  background-color: var(--darkerblue);
+.btn-spacecadet {
+  background-color: var(--spacecadet);
   color: var(--ghost-white);
   border-style: none;
 }
 
-.btn-darkerblue:hover {
-  background-color: var(--darkerblue);
+.btn-spacecadet:hover {
+  background-color: var(--spacecadet);
   color: var(--gunmetal);
 }
 .bg-emerald {
@@ -65,7 +64,7 @@
 }
 
 .btn-ghostwhite:hover {
-  background-color: var(--darkerblue);
+  background-color: var(--spacecadet);
   color: var(--ghost-white);
   border: none;
 }
@@ -88,6 +87,17 @@
 
 .text-ghost-white {
   color: var(--ghost-white) !important;
+}
+
+.btn-outline-spacecadet {
+  color: var(--spacecadet); /* Text color */
+  border-color: var(--spacecadet); /* Border color */
+  background-color: transparent; /* Ensure background is transparent */
+}
+
+.btn-outline-spacecadet:hover {
+  background-color: var(--spacecadet); /* Background color on hover */
+  color: #fff; /* Text color on hover */
 }
 
 .text-purpureus {
@@ -159,7 +169,7 @@ body .offcanvas {
 
 .heroimage-bg {
   width: 50%;
-  height: 100%;
+  height: 130vh;
   object-fit: cover; /* Cover the area without squeezing the image */
   position: absolute;
   top: 0;
@@ -173,7 +183,11 @@ body .offcanvas {
 }
 
 .display-1 {
-  font-weight: bolder !important;
+  font-weight: bold !important;
+}
+
+.display-2 {
+  font-weight: bold !important;
 }
 /* Apply the blue overlay */
 .heroimage::after {
@@ -183,7 +197,7 @@ body .offcanvas {
   top: 0;
   left: 0;
   width: 50%; /* Apply overlay to the left half only */
-  height: 100%;
+  height: 130vh;
   z-index: 1; /* Above the image, below the content */
 }
 
@@ -320,12 +334,12 @@ body .offcanvas {
 }
 
 .footer {
-  background: var(--darkblue);
+  background: var(--spacecadet);
 }
 
 .quiz-card {
   margin-bottom: 1rem;
-  background: var(--darkblue);
+  background: var(--spacecadet);
   color: var(--ghost-white);
 }
 .quiz-card .card-body {
@@ -351,7 +365,7 @@ body .offcanvas {
 }
 .card-title {
   font-size: 6rem; /* Large number font size */
-  color: var(--darkblue); /* Dark grey color for the number */
+  color: var(--spacecadet); /* Dark grey color for the number */
 }
 .card-text {
   color: #666; /* Lighter grey color for the text */
@@ -384,4 +398,61 @@ body .offcanvas {
 #second-section {
   clear: both;
   padding-top: 35%; /* Adjust this value based on the size of the image to prevent overlap */
+}
+
+.rounded-image-section img {
+  border-radius: 20px; /* Adjust the px value to the desired border-radius */
+  display: block; /* Removes bottom space by making image a block-level element */
+  width: 100%; /* Forces the image to occupy the full width of its container */
+  height: auto; /* Keeps the image's aspect ratio */
+  margin: 0 auto; /* Removes margin and centers the image if necessary */
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.semibold {
+  font-weight: 600 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.custom-row::before {
+  content: ""; /* Required for pseudo-elements */
+  display: block; /* Makes the pseudo-element behave like a block element */
+  height: 1px; /* Thickness of the 'border' */
+  background-color: #5f5f5f; /* Color of the 'border', change as needed */
+  position: relative; /* Positions the pseudo-element relative to its parent */
+  left: 0; /* Ensures the border starts from the left edge */
+  top: -20px; /* Increase this value to move the border higher */
+}
+
+@media (min-width: 991px) {
+  /* Adjust 991px based on the exact lg breakpoint you are using, this targets screens smaller than lg */
+  .min-vh-lg-100 {
+    min-height: 100vh; /* This will now only apply to screens smaller than lg */
+  }
+
+  .ml-lg-auto {
+    margin-left: auto;
+    margin-right: auto; /* These will now only apply to screens smaller than lg */
+  }
+
+  .custom-row::before {
+    content: ""; /* Required for pseudo-elements */
+    display: block; /* Makes the pseudo-element behave like a block element */
+    width: 80%; /* Adjust this value to set the border length */
+    height: 1px; /* Thickness of the 'border' */
+    background-color: #000000; /* Color of the 'border', change as needed */
+    position: relative; /* Positions the pseudo-element relative to its parent */
+    left: 0; /* Ensures the border starts from the left edge */
+    top: -20px; /* Increase this value to move the border higher, this will now only apply to screens smaller than lg */
+  }
 }
