@@ -126,30 +126,33 @@
           </div>
         </nav>
       </header>
-      <section class="container-fluid py-lg-8 pb-5 heroimage">
+      <section
+        class="container-fluid py-lg-8 pb-5 heroimage"
+        style="overflow: hidden"
+      >
         <figure>
           <img
             class="heroimage-bg"
-            src="../images/heroimage.jpg"
+            src="images/heroimage.jpg"
             alt="Background"
           />
           <!-- <figcaption>Description of the image if needed</figcaption> -->
         </figure>
-        <div class="container">
+        <div class="container" style="position: relative">
           <div class="row align-items-center">
-            <div class="col-lg-6 ps-4 ps-lg-5 custom-padding">
-              <h1 class="display-1 text-ghost-white">
-                Lorem Ipsum Dolor Sit Amet consectetur adipiscing elit
+            <div class="col-lg-6 ps-4 custom-padding">
+              <h1 class="display-1 text-gunmetal pb-3">
+                Inflation's Grip: Where Your Money Vanishes
               </h1>
               <div>
                 <a
                   href="#interactive-map"
-                  class="btn btn-darkerblue rounded py-3 px-4"
+                  class="btn btn-darkerblue rounded py-3 px-4 herobtn"
                   >Explore Map</a
                 >
                 <a
                   href="#get-involved"
-                  class="btn btn-darkerblue rounded py-3 px-4"
+                  class="btn btn-darkerblue rounded py-3 px-4 herobtn"
                   >Impact</a
                 >
               </div>
@@ -395,9 +398,9 @@
     </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="js/script.js"></script>
-    <script src="libraries/chart/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="libraries/chart/chartData.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="libraries/chart/gsap.js"></script>
   </body>
 </html>

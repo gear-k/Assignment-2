@@ -158,15 +158,18 @@ body .offcanvas {
 }
 
 .heroimage-bg {
-  width: 100%;
+  width: 50%;
   height: 100%;
   object-fit: cover; /* Cover the area without squeezing the image */
-  object-position: right center; /* Focus on the right side of the image */
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 0;
-  filter: grayscale(60%); /* Apply grayscale filter to the image */
+  z-index: -1;
+}
+
+.container-fluid.heroimage {
+  position: relative;
+  overflow: hidden; /* Prevents image overflow */
 }
 
 .display-1 {
