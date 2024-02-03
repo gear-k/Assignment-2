@@ -16,6 +16,10 @@
   border: 1px solid var(--darkcolor1) !important;
 }
 
+.border-bottom {
+  border-color: var(--darkcolor1) !important;
+}
+
 .bg-darkcolor1 {
   background-color: var(--darkcolor1);
 }
@@ -353,4 +357,28 @@ body .offcanvas {
 
 .font-weight-extra-bold {
   font-weight: 400 !important; /* You can use 700 for bold or 900 for extra bold, depending on what you need */
+}
+
+.image-container {
+  position: relative;
+  padding-bottom: 10%; /* Adjust this value to give space for the image overhanging into the next section */
+}
+
+.half-image {
+  position: absolute;
+  left: 50%;
+  bottom: -50%; /* This should be half of the image's height to center it on the boundary */
+  transform: translate(
+    -50%,
+    50%
+  ); /* Center horizontally and move up 50% of the image's height */
+  width: auto; /* Adjust width as necessary, could be 100% if you want it full width */
+  max-width: 100%; /* Ensures the image is responsive and does not exceed its parent's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional CSS to ensure text in the next section clears the overhanging image */
+#second-section {
+  clear: both;
+  padding-top: 35%; /* Adjust this value based on the size of the image to prevent overlap */
 }
