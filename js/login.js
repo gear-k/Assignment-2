@@ -8,9 +8,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     var apiKey = '65be5892c1ff3a2d670fe5a0';
 
     // RESTdb API endpoint for user data
-    var apiUrl = `https://signup-828c.restdb.io/rest/signup-828c?q={"email": "${encodeURIComponent(email)}"}`;
-
-    console.log("API URL: ", apiUrl); // Debugging: Log the API URL
+    var apiUrl = 'https://signup-828c.restdb.io/rest/signup?q={"email":"' + encodeURIComponent(email) + '"}';
 
     fetch(apiUrl, {
         method: 'GET',
