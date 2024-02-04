@@ -270,6 +270,10 @@ body .offcanvas {
   padding-bottom: 10rem;
 }
 
+.px-6 {
+  padding: 4rem;
+}
+
 .pt-7 {
   padding-top: 6rem;
 }
@@ -294,6 +298,9 @@ body .offcanvas {
   padding-bottom: 10.5rem;
 }
 
+.pt-10 {
+  padding-top: 10.5rem;
+}
 .logos {
   font-size: 3rem;
 }
@@ -432,6 +439,14 @@ body .offcanvas {
   position: relative; /* Positions the pseudo-element relative to its parent */
   left: 0; /* Ensures the border starts from the left edge */
   top: -20px; /* Increase this value to move the border higher */
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.rounded-bottom-right {
+  border-radius: 0 0 60px 0; /* Adjust the radius as needed */
 }
 
 @media (min-width: 991px) {
