@@ -9,6 +9,8 @@
   --spacecadet: #151e3f;
   --oxfordblue: #030027;
   --lightgrey: #eaeaee;
+  --buff: #dc9e82;
+  --oldrose: #c16e70;
 }
 
 .border-oxfordblue {
@@ -69,6 +71,17 @@
   border: none;
 }
 
+.text-buff {
+  color: var(--buff);
+}
+
+.text-spacecadet {
+  color: var(--spacecadet);
+}
+.bg-oldrose {
+  background-color: var(--oldrose);
+}
+
 .bg-purpureus {
   background-color: var(--purpureus);
 }
@@ -98,6 +111,17 @@
 .btn-outline-spacecadet:hover {
   background-color: var(--spacecadet); /* Background color on hover */
   color: #fff; /* Text color on hover */
+}
+
+.btn-outline-ghostwhite {
+  color: var(--ghost-white); /* Text color */
+  border-color: var(--ghost-white); /* Border color */
+  background-color: transparent; /* Ensure background is transparent */
+}
+
+.btn-outline-ghostwhite:hover {
+  background-color: var(--ghost-white); /* Background color on hover */
+  color: var(--gunmetal); /* Text color on hover */
 }
 
 .text-purpureus {
@@ -167,10 +191,20 @@ body .offcanvas {
   overflow: hidden; /* Prevents the image from exceeding the hero section */
 }
 
-.heroimage-bg {
+.heroimage-bg-index {
   width: 50%;
   height: 130vh;
   object-fit: cover; /* Cover the area without squeezing the image */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.heroimage-bg-impact {
+  object-fit: cover; /* Cover the area without squeezing the image */
+  width: 100%;
+  height: 130vh;
   position: absolute;
   top: 0;
   right: 0;
@@ -182,13 +216,6 @@ body .offcanvas {
   overflow: hidden; /* Prevents image overflow */
 }
 
-.display-1 {
-  font-weight: bold !important;
-}
-
-.display-2 {
-  font-weight: bold !important;
-}
 /* Apply the blue overlay */
 .heroimage::after {
   content: "";
@@ -266,8 +293,8 @@ body .offcanvas {
 
 /* The following are new or conflicting rules that have been resolved */
 .custom-padding {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  padding-top: 20rem;
+  padding-bottom: 15rem;
 }
 
 .px-6 {
@@ -292,6 +319,10 @@ body .offcanvas {
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
+.py-lg-9 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
 
 .py-10 {
   padding-top: 10.5rem;
@@ -300,6 +331,10 @@ body .offcanvas {
 
 .pt-10 {
   padding-top: 10.5rem;
+}
+
+.pt-11 {
+  padding-top: 13rem;
 }
 .logos {
   font-size: 3rem;
@@ -383,11 +418,6 @@ body .offcanvas {
   font-weight: 400 !important; /* You can use 700 for bold or 900 for extra bold, depending on what you need */
 }
 
-.image-container {
-  position: relative;
-  padding-bottom: 10%; /* Adjust this value to give space for the image overhanging into the next section */
-}
-
 .half-image {
   position: absolute;
   left: 50%;
@@ -431,6 +461,10 @@ body .offcanvas {
   font-weight: bold;
 }
 
+.regularweight {
+  font-weight: normal;
+}
+
 .custom-row::before {
   content: ""; /* Required for pseudo-elements */
   display: block; /* Makes the pseudo-element behave like a block element */
@@ -447,6 +481,43 @@ body .offcanvas {
 
 .rounded-bottom-right {
   border-radius: 0 0 60px 0; /* Adjust the radius as needed */
+}
+
+.pt-lg-11 {
+  padding-top: 0rem;
+}
+
+.downarrow {
+  font-size: 4rem;
+}
+
+.scroll-to-target .downarrow {
+  color: var(--gunmetal);
+}
+
+.impact-text-size {
+  font-size: 1.5rem;
+}
+
+.impacticon {
+  font-size: 2rem !important;
+}
+
+.circle-icon {
+  border-radius: 20%; /* Create a circular shape */
+  border-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid black; /* Add a border with a specified color and width */
+}
+
+.impact-list {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.pt-lg-9 {
+  padding-top: 0rem;
 }
 
 @media (min-width: 991px) {
@@ -469,5 +540,18 @@ body .offcanvas {
     position: relative; /* Positions the pseudo-element relative to its parent */
     left: 0; /* Ensures the border starts from the left edge */
     top: -20px; /* Increase this value to move the border higher, this will now only apply to screens smaller than lg */
+  }
+
+  .pt-lg-11 {
+    padding-top: 13rem;
+  }
+
+  .py-lg-9 {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  .pt-lg-9 {
+    padding-top: 9rem;
   }
 }
