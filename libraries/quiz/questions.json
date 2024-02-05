@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "What is inflation?",
+        "options": [
+          "A decrease in the overall price level of goods and services.",
+          "A sustained increase in the general price level of goods and services.",
+          "An increase in the value of a currency.",
+          "A decrease in the money supply."
+        ],
+        "answer": "B. A sustained increase in the general price level of goods and services."
+      },
+      {
+        "question": "Which of the following is a common cause of inflation?",
+        "options": [
+          "Decrease in government spending.",
+          "Decrease in consumer demand.",
+          "Increase in money supply.",
+          "Increase in taxes."
+        ],
+        "answer": "C. Increase in money supply."
+      },
+      {
+        "question": "What is hyperinflation?",
+        "options": [
+          "A moderate increase in prices over an extended period.",
+          "A very high and typically accelerating inflation.",
+          "A temporary decrease in prices.",
+          "A stable price level."
+        ],
+        "answer": "B. A very high and typically accelerating inflation."
+      },
+      {
+        "question": "Which index is commonly used to measure inflation in the United States?",
+        "options": [
+          "Consumer Confidence Index (CCI).",
+          "Consumer Price Index (CPI).",
+          "Gross Domestic Product (GDP).",
+          "Producer Price Index (PPI)."
+        ],
+        "answer": "B. Consumer Price Index (CPI)."
+      },
+      {
+        "question": "How does inflation impact savers?",
+        "options": [
+          "Increases the purchasing power of savings.",
+          "Decreases the real value of savings.",
+          "Has no effect on savings.",
+          "Leads to higher interest rates for savers."
+        ],
+        "answer": "B. Decreases the real value of savings."
+      },
+      {
+        "question": "Which country experienced hyperinflation in the early 20th century, with prices doubling every few days?",
+        "options": [
+          "United States.",
+          "Germany.",
+          "Japan.",
+          "United Kingdom."
+        ],
+        "answer": "B. Germany."
+      },
+      {
+        "question": "What is the Phillips Curve used to illustrate?",
+        "options": [
+          "The relationship between inflation and unemployment.",
+          "The relationship between interest rates and inflation.",
+          "The impact of government spending on inflation.",
+          "The correlation between GDP and inflation."
+        ],
+        "answer": "A. The relationship between inflation and unemployment."
+      },
+      {
+        "question": "What is demand-pull inflation?",
+        "options": [
+          "Inflation caused by a decrease in aggregate demand.",
+          "Inflation caused by an increase in aggregate supply.",
+          "Inflation caused by an increase in aggregate demand.",
+          "Inflation caused by a decrease in aggregate supply."
+        ],
+        "answer": "C. Inflation caused by an increase in aggregate demand."
+      },
+      {
+        "question": "Which central bank is responsible for monetary policy in the Eurozone?",
+        "options": [
+          "Federal Reserve.",
+          "Bank of Japan.",
+          "European Central Bank (ECB).",
+          "Bank of England."
+        ],
+        "answer": "C. European Central Bank (ECB)."
+      },
+      {
+        "question": "What is the impact of deflation on the economy?",
+        "options": [
+          "Encourages spending and investment.",
+          "Increases the real value of debt.",
+          "Stimulates economic growth.",
+          "Can lead to a downward economic spiral."
+        ],
+        "answer": "D. Can lead to a downward economic spiral."
+      }
+    ]
+  }
+  
