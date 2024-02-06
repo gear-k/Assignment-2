@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       let email = document.getElementById("floatingInput").value;
+      let username = document.getElementById("username").value;
       let password = document.getElementById("floatingPassword").value;
       let cnfmpassword = document.getElementById("cnfmpassword").value;
       let passwordMismatchMessage =
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Content-Type": "application/json",
           "x-apikey": "65be5892c1ff3a2d670fe5a0",
         },
-        body: JSON.stringify({ email, password, cnfmpassword }),
+        body: JSON.stringify({ email, password, cnfmpassword, username }),
       })
         .then((response) => {
           if (!response.ok) {
