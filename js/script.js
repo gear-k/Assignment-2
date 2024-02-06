@@ -1,3 +1,4 @@
+localStorage.setItem("isLoggedIn", "false");
 document.body.setAttribute("data-bs-theme", "light");
 // this code is for when you open the offcavnas and go back to big screen, the offcanvas will go away.
 window.addEventListener("resize", function () {
@@ -41,19 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var agreeTermsCheckbox = document.getElementById("agreeTerms");
-  var loginButton = document.getElementById("loginButton");
-
-  // Disable the login button by default
-  loginButton.disabled = true;
-
-  // Add an event listener to the checkbox
-  agreeTermsCheckbox.addEventListener("change", function () {
-    // Enable the login button if the checkbox is checked
-    loginButton.disabled = !agreeTermsCheckbox.checked;
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var agreeTermsCheckbox = document.getElementById("agreeTerms");
   var loginButton = document.getElementById("signUpButton");
 
   // Disable the login button by default
@@ -91,4 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
   confirmPasswordInput.addEventListener("input", function () {
     passwordMismatchMessage.style.display = "none";
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const authButtons = document.getElementById("authButtons");
+  const accountButton = document.getElementById("accountButton");
+
+  if (isLoggedIn === "true") {
+    // Remove 'd-lg-block' from 'authButtons' and add 'd-none' to hide it
+    authButtons.classList.remove("d-lg-block");
+    authButtons.classList.add("d-none");
+
+    // Remove 'd-none' from 'accountButton' and add 'd-lg-block' to show it
+    accountButton.classList.remove("d-none");
+    accountButton.classList.add("d-lg-block");
+  } else {
+    // Add 'd-lg-block' to 'authButtons' and ensure 'd-none' is not present to show them
+    authButtons.classList.add("d-lg-block");
+    authButtons.classList.remove("d-none");
+
+    // Add 'd-none' to 'accountButton' and remove 'd-lg-block' to hide it
+    accountButton.classList.add("d-none");
+    accountButton.classList.remove("d-lg-block");
+  }
 });

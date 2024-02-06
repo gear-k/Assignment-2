@@ -13,6 +13,16 @@
   --oldrose: #c16e70;
 }
 
+.gameback {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--ghost-white),
+    var(--oxfordblue)
+  );
+}
+.footer-sections {
+  color: var(--lightgrey);
+}
 .border-oxfordblue {
   border: 1px solid var(--oxfordblue) !important;
 }
@@ -26,7 +36,7 @@
 }
 
 .bg-spacecadet {
-  background-color: var(--spacecadet);
+  background-color: var(--spacecadet) !important;
 }
 
 .bg-lightgrey {
@@ -47,6 +57,24 @@
   background-color: var(--oxfordblue);
   color: var(--ghost-white);
 }
+.btn-spacecadet:focus {
+  background-color: var(--oxfordblue);
+  color: var(--ghost-white);
+}
+
+.btn-account {
+  color: var(--ghost-white);
+  border-style: none;
+}
+
+.btn-account:hover {
+  background-color: var(--oxfordblue);
+  color: var(--ghost-white);
+}
+.btn-account:focus {
+  color: var(--ghost-white);
+}
+
 .bg-emerald {
   background-color: var(--emerald);
 }
@@ -57,6 +85,10 @@
 
 .bg-ghost-white {
   background-color: var(--ghost-white);
+}
+
+.border-bottom-offcanvas {
+  border-color: var(--ghost-white) !important;
 }
 
 .btn-ghostwhite {
@@ -262,6 +294,9 @@ body .offcanvas {
   padding-bottom: 4rem;
 }
 
+.ps-6 {
+  padding-left: 4rem;
+}
 .custom-text-color {
   color: #000000 !important;
 }
@@ -343,7 +378,7 @@ body .offcanvas {
   padding-top: 13rem;
 }
 .logos {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .logos-padding {

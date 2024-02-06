@@ -18,12 +18,12 @@
 
     <title>Ready to start?</title>
   </head>
-  <body>
+  <body class="gameback">
     <!-- Off-Canvas Menu -->
     <!-- CHANGE -->
     <nav data-bs-theme="dark">
       <div
-        class="offcanvas offcanvas-start"
+        class="offcanvas offcanvas-start bg-spacecadet"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -39,99 +39,149 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Home</a>
+            <li class="nav-item offcanvas">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Map</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="map.html">Map</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="aboutus.html">About</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Donate</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="gamepage.html">Game</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Impact</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="impact.html">Impact</a>
             </li>
 
-            <div class="d-lg-block">
-              <br />
-              <button type="button" class="btn btn-light">Login</button>
-              <button type="button" class="btn btn-light">Sign Up</button>
+            <div class="me-auto pt-4">
+              <div id="authButtons" class="d-lg-block">
+                <a href="login.html" class="text-decoration-none">
+                  <button
+                    type="button"
+                    class="btn btn-ghostwhite rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Login
+                  </button>
+                </a>
+                <a href="signup.html">
+                  <button
+                    type="button"
+                    class="btn btn-ghostwhite rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Sign Up
+                  </button>
+                </a>
+              </div>
+              <div id="accountButton" class="d-none">
+                <a href="account.html" class="text-decoration-none">
+                  <button
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+                </a>
+              </div>
             </div>
           </ul>
         </div>
       </div>
     </nav>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg fixed-top w-100 py-3"
-        data-bs-theme="light"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="#">InflaGlobe</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Impact</a>
-              </li>
-            </ul>
-            <div class="d-none d-lg-block">
-              <a href="login.html" class="text-decoration-none">
-                <button
-                  type="button"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Login
-                </button>
-              </a>
-              <a href="signup.html">
-                <button
-                  type="button"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Sign Up
-                </button>
-              </a>
+    <section>
+      <header>
+        <nav
+          class="navbar navbar-expand-lg fixed-top w-100 py-3"
+          data-bs-theme="light"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#">InflaGlobe</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Left Branding or Placeholder for balance -->
+              <div class="me-auto d-none d-lg-block"></div>
+
+              <!-- Centered Navigation Links -->
+              <ul class="navbar-nav ps-6">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gamepage.html">Game</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="impact.html">Impact</a>
+                </li>
+              </ul>
+
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none">
+                  <a href="account.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Account
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </section>
     <div
       class="d-flex justify-content-center align-items-center"
       style="min-height: 100vh"
     >
-      <main class="text-center slightly-above-center">
+      <main class="text-center slightly-above-center text-ghost-white">
         <h1>Ready to Start the Quiz?</h1>
         <p>Check the leaderboards after this to see where you stand!</p>
-        <button type="button" class="btn btn-primary btn-lg">
-          Large button
-        </button>
+        <a href="quiz.html"
+          ><button type="button" class="btn btn-spacecadet rounded px-5 py-2">
+            Play
+          </button></a
+        >
       </main>
     </div>
     <div class="container-fluid footer text-ghost-white">
@@ -160,19 +210,27 @@
             <h5>Section</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">Home</a>
+                <a href="index.html" class="nav-link p-0 footer-sections"
+                  >Home</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">Features</a>
+                <a href="map.html" class="nav-link p-0 footer-sections">Map</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">Pricing</a>
+                <a href="about.html" class="nav-link p-0 footer-sections"
+                  >About</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">FAQs</a>
+                <a href="gamepage.html" class="nav-link p-0 footer-sections"
+                  >Game</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">About</a>
+                <a href="impact.html" class="nav-link p-0 footer-sections"
+                  >Impact</a
+                >
               </li>
             </ul>
           </div>
@@ -181,16 +239,16 @@
             <h5>Social Media</h5>
             <ul class="nav flex-column link-offset-1">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">Instagram</a>
+                <a href="#" class="nav-link p-0 footer-sections">Instagram</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">X</a>
+                <a href="#" class="nav-link p-0 footer-sections">X</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">Facebook</a>
+                <a href="#" class="nav-link p-0 footer-sections">Facebook</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-ghost-white p-0">TikTok</a>
+                <a href="#" class="nav-link p-0 footer-sections">TikTok</a>
               </li>
             </ul>
           </div>
