@@ -120,21 +120,33 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="container py-7" id="quiz-container">
-        <h2 id="question-text" class="mb-4"></h2>
-        <div id="options-container" class="d-flex flex-column"></div>
-        <button
-          id="next-question-btn"
-          class="btn btn-primary mt-3"
-          style="display: none"
-          onclick="nextQuestion()"
-        >
-          Next Question
-        </button>
-        <div id="quiz-result" class="mt-3" style="display: none"></div>
-      </section>
-    </main>
+    <div class="app mt-5 pt-5"> <!-- Increased top margin and padding -->
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div class="quiz-container bg-light p-4 border rounded shadow">
+                      <h1 class="text-center">Quiz</h1>
+                      <div id="question-container" class="hide">
+                          <div id="question" class="mb-4 h4"></div>
+                          <div id="answer-buttons" class="d-flex flex-column align-items-center">
+                              <button class="btn btn-primary ans-btn mb-2 rounded-pill">Answer 1</button>
+                              <button class="btn btn-primary ans-btn mb-2 rounded-pill">Answer 2</button>
+                              <button class="btn btn-primary ans-btn mb-2 rounded-pill">Answer 3</button>
+                              <button class="btn btn-primary ans-btn mb-2 rounded-pill">Answer 4</button>
+                          </div>
+                      </div>
+                      <div id="result-container" class="hide text-center">
+                          <h2 id="result"></h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    
     <div class="container-fluid footer text-ghost-white">
       <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
@@ -203,7 +215,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="libraries/chart/chartData.js"></script>
     <script src="js/script.js" defer></script>
-    <script src="js/quiz.js"></script>
+    <script src="js/quiz.js" defer></script>
+    <script src="quiz/questions.json"></script>
     <script src="libraries/quiz/questions.json"></script>
   </body>
 </html>

@@ -1,104 +1,52 @@
-{
-  "questions": [
-    {
-      "question": "What is one of the consequences of inflation mentioned in the content?",
-      "options": [
-        "a) Reduced interest rates",
-        "b) Increased purchasing power",
-        "c) Lower cost of living",
-        "d) Erosion of money's value"
-      ],
-      "answer": "d) Erosion of money's value"
-    },
-    {
-      "question": "How does inflation affect the real value of savings and investments?",
-      "options": [
-        "a) It has no impact on savings and investments.",
-        "b) It increases their real value.",
-        "c) It preserves their real value.",
-        "d) It erodes their real value over time."
-      ],
-      "answer": "d) It erodes their real value over time."
-    },
-    {
-      "question": "What is the primary reason for central banks increasing interest rates during high inflation?",
-      "options": [
-        "a) To encourage borrowing and spending",
-        "b) To control inflation",
-        "c) To reduce the cost of living",
-        "d) To lower the value of money"
-      ],
-      "answer": "b) To control inflation"
-    },
-    {
-      "question": "Which of the following is a strategy mentioned to mitigate the impact of inflation on personal finances?",
-      "options": [
-        "a) Reducing diversification",
-        "b) Increasing debt",
-        "c) Financial planning and strategies",
-        "d) Ignoring inflation"
-      ],
-      "answer": "c) Financial planning and strategies"
-    },
-    {
-      "question": "How does inflation affect the cost of living?",
-      "options": [
-        "a) It decreases the overall cost of living.",
-        "b) It has no impact on the cost of living.",
-        "c) It increases the cost of living.",
-        "d) It only affects housing costs."
-      ],
-      "answer": "c) It increases the cost of living."
-    },
-    {
-      "question": "What is the main concern for retirees with fixed incomes when it comes to inflation?",
-      "options": [
-        "a) Increased purchasing power",
-        "b) Decreased healthcare costs",
-        "c) Erosion of their purchasing power",
-        "d) No impact on retirement income"
-      ],
-      "answer": "c) Erosion of their purchasing power"
-    },
-    {
-      "question": "How can retirees safeguard against inflation's impact on their fixed incomes?",
-      "options": [
-        "a) By avoiding diversification",
-        "b) By reducing their retirement budget",
-        "c) By not considering inflation-protected securities",
-        "d) By diversifying investments and creating a budget that accounts for rising costs"
-      ],
-      "answer": "d) By diversifying investments and creating a budget that accounts for rising costs"
-    },
-    {
-      "question": "What is the primary goal of financial planning for retirement in the context of inflation?",
-      "options": [
-        "a) To spend retirement savings quickly",
-        "b) To rely solely on social security",
-        "c) To secure a fixed income",
-        "d) To protect against the erosion of purchasing power"
-      ],
-      "answer": "d) To protect against the erosion of purchasing power"
-    },
-    {
-      "question": "Inflation's impact on interest rates can affect which of the following?",
-      "options": [
-        "a) Borrowing costs for businesses and individuals",
-        "b) The value of money",
-        "c) Cost of living for retirees",
-        "d) Savings and investments equally"
-      ],
-      "answer": "a) Borrowing costs for businesses and individuals"
-    },
-    {
-      "question": "What does the provided HTML content encourage users to do at the end?",
-      "options": [
-        "a) Watch a video",
-        "b) Take an inflation quiz",
-        "c) Download a document",
-        "d) Subscribe to a newsletter"
-      ],
-      "answer": "b) Take an inflation quiz"
-    }
-  ]
-}
+[
+  {
+    "question": "What is one of the consequences of inflation mentioned in the content?",
+    "answers": [
+      "Reduced interest rates",
+      "Increased purchasing power",
+      "Lower cost of living",
+      "Erosion of money's value"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "How does inflation affect the real value of savings and investments?",
+    "answers": [
+      "It has no impact on savings and investments.",
+      "It increases their real value.",
+      "It preserves their real value.",
+      "It erodes their real value over time."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "question": "What is the primary reason for central banks increasing interest rates during high inflation?",
+    "answers": [
+      "To encourage borrowing and spending",
+      "To control inflation",
+      "To reduce the cost of living",
+      "To lower the value of money"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "question": "Which of the following is a strategy mentioned to mitigate the impact of inflation on personal finances?",
+    "answers": [
+      "Reducing diversification",
+      "Increasing debt",
+      "Financial planning and strategies",
+      "Ignoring inflation"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "question": "How does inflation affect the cost of living?",
+    "answers": [
+      "It decreases the overall cost of living.",
+      "It has no impact on the cost of living.",
+      "It increases the cost of living.",
+      "It only affects housing costs."
+    ],
+    "correctIndex": 2
+  }
+]
