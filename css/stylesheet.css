@@ -44,8 +44,8 @@
 }
 
 .btn-spacecadet:hover {
-  background-color: var(--spacecadet);
-  color: var(--gunmetal);
+  background-color: var(--oxfordblue);
+  color: var(--ghost-white);
 }
 .bg-emerald {
   background-color: var(--emerald);
@@ -66,8 +66,8 @@
 }
 
 .btn-ghostwhite:hover {
-  background-color: var(--spacecadet);
-  color: var(--ghost-white);
+  background-color: var(--lightgrey);
+  color: var(--spacecadet);
   border: none;
 }
 
@@ -192,13 +192,14 @@ body .offcanvas {
 }
 
 .heroimage-bg-index {
-  width: 50%;
-  height: 130vh;
+  width: 100%;
+  height: 100vh;
   object-fit: cover; /* Cover the area without squeezing the image */
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
+  filter: brightness(0.7); /* Adjust the value as needed */
 }
 
 .heroimage-bg-impact {
@@ -294,7 +295,12 @@ body .offcanvas {
 /* The following are new or conflicting rules that have been resolved */
 .custom-padding {
   padding-top: 20rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
+}
+
+.custom-padding-about {
+  padding-top: 20rem;
+  padding-bottom: 10rem;
 }
 
 .px-6 {
@@ -379,6 +385,9 @@ body .offcanvas {
   background: var(--spacecadet);
 }
 
+.navbtn {
+  font-size: 1.1rem;
+}
 .quiz-card {
   margin-bottom: 1rem;
   background: var(--spacecadet);
@@ -520,10 +529,14 @@ body .offcanvas {
   padding-top: 0rem;
 }
 
+.textcard {
+  font-size: 1.5rem;
+}
 @media (min-width: 991px) {
   /* Adjust 991px based on the exact lg breakpoint you are using, this targets screens smaller than lg */
   .min-vh-lg-100 {
     min-height: 100vh; /* This will now only apply to screens smaller than lg */
+    object-fit: cover;
   }
 
   .ml-lg-auto {

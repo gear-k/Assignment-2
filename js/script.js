@@ -39,29 +39,56 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// $(document).ready(function () {
-//   // Add smooth scrolling to all links with the class scroll-to-target
-//   $(".scroll-to-target").on("click", function (event) {
-//     // Make sure this.hash has a value before overriding default behavior
-//     if (this.hash !== "") {
-//       // Prevent default anchor click behavior
-//       event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  var agreeTermsCheckbox = document.getElementById("agreeTerms");
+  var loginButton = document.getElementById("loginButton");
 
-//       // Store hash
-//       var hash = this.hash;
+  // Disable the login button by default
+  loginButton.disabled = true;
 
-//       // Using jQuery's animate() method to add smooth page scroll
-//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//       $("html, body").animate(
-//         {
-//           scrollTop: $(hash).offset().top,
-//         },
-//         800,
-//         function () {
-//           // Add hash (#) to URL when done scrolling (default click behavior)
-//           window.location.hash = hash;
-//         }
-//       );
-//     } // End if
-//   });
-// });
+  // Add an event listener to the checkbox
+  agreeTermsCheckbox.addEventListener("change", function () {
+    // Enable the login button if the checkbox is checked
+    loginButton.disabled = !agreeTermsCheckbox.checked;
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var agreeTermsCheckbox = document.getElementById("agreeTerms");
+  var loginButton = document.getElementById("signUpButton");
+
+  // Disable the login button by default
+  loginButton.disabled = true;
+
+  // Add an event listener to the checkbox
+  agreeTermsCheckbox.addEventListener("change", function () {
+    // Enable the login button if the checkbox is checked
+    loginButton.disabled = !agreeTermsCheckbox.checked;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var signUpForm = document.getElementById("login-form");
+  var passwordInput = document.getElementsByName("password")[0];
+  var confirmPasswordInput = document.getElementsByName("password-repeat")[0];
+  var passwordMismatchMessage = document.getElementById("password-mismatch");
+  var signUpButton = document.getElementById("signUpButton");
+
+  signUpForm.addEventListener("submit", function (event) {
+    if (passwordInput.value !== confirmPasswordInput.value) {
+      passwordMismatchMessage.textContent = "Password does not match";
+      passwordMismatchMessage.style.display = "block";
+      event.preventDefault(); // Prevent form submission
+    } else {
+      passwordMismatchMessage.style.display = "none";
+    }
+  });
+
+  // Add an event listener to clear the warning message when inputs change
+  passwordInput.addEventListener("input", function () {
+    passwordMismatchMessage.style.display = "none";
+  });
+
+  confirmPasswordInput.addEventListener("input", function () {
+    passwordMismatchMessage.style.display = "none";
+  });
+});

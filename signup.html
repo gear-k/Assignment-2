@@ -130,7 +130,7 @@
             </div>
             <!-- Form Column -->
             <div class="col-lg-4 p-5">
-              <form method="post">
+              <form method="post" id="signup-form">
                 <h2 class="text-center mb-4">
                   <strong>Create</strong> an account.
                 </h2>
@@ -148,6 +148,7 @@
                     type="password"
                     class="form-control"
                     id="floatingPassword"
+                    name="password"
                     placeholder="Password"
                   />
                   <label for="floatingPassword">Password</label>
@@ -161,7 +162,9 @@
                     placeholder="Password (repeat)"
                   />
                   <label for="floatingPassword">Password (Repeat)</label>
+                  <span id="password-mismatch" class="text-danger"></span>
                 </div>
+
                 <div class="mb-3 form-check">
                   <input
                     type="checkbox"
@@ -173,13 +176,17 @@
                   >
                 </div>
                 <div class="d-grid">
-                  <button class="btn btn-darkerblue" type="submit">
+                  <button
+                    class="btn btn-spacecadet"
+                    type="submit"
+                    id="signUpButton"
+                  >
                     Sign Up
                   </button>
                 </div>
                 <p class="text-center mt-3">
                   <a href="#" class="link-offset-1 text-gunmetal"
-                    >You already have an account? Login here.</a
+                    >Have an account? Login here.</a
                   >
                 </p>
               </form>
