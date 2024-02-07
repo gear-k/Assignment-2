@@ -107,17 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Get the logout button element
-  const logoutButton = document.getElementById("logoutButton");
+  // Get all elements with the class name "logoutbtn"
+  const logoutButtons = document.querySelectorAll(".logoutbtn");
 
-  // Add click event listener to the logout button
-  logoutButton.addEventListener("click", () => {
-    // Remove isLoggedIn status from localStorage
-    localStorage.removeItem("isLoggedIn");
+  // Add click event listener to each logout button
+  logoutButtons.forEach((logoutButton) => {
+    logoutButton.addEventListener("click", () => {
+      // Remove isLoggedIn status from localStorage
+      localStorage.removeItem("isLoggedIn");
 
-    // Optionally, perform any additional logout-related tasks here
+      // Optionally, perform any additional logout-related tasks here
 
-    // Redirect the user to the login page or any other desired destination
-    window.location.href = "index.html";
+      // Redirect the user to the login page or any other desired destination
+      window.location.href = "index.html";
+    });
   });
 });
