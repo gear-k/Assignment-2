@@ -2,7 +2,7 @@ svg path{
     cursor: pointer;
 }
 svg path:hover{
-    fill: pink;
+    fill: #151e3f;
 }
 
 *{

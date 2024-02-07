@@ -11,7 +11,9 @@ function getAndDisplayGDPGrowth(place) {
         if (data && data.length > 0) {
             const countryName = data[0].name; // Accessing the name
             const gdpGrowth = data[0].gdp_growth; // Accessing the gdp_growth
-            document.getElementById("api").innerText = `Country: ${countryName}, GDP Growth: ${gdpGrowth}`;
+            const nameElement = document.getElementById("name");
+            nameElement.innerHTML = `<strong>${countryName}</strong><br>GDP Growth: ${gdpGrowth}`; // Display country name and GDP growth on separate lines
+            nameElement.style.opacity = 1;
         } else {
             console.error('No data found for:', place);
         }
@@ -24,29 +26,24 @@ function getAndDisplayGDPGrowth(place) {
 // Event listeners for each path (country)
 document.querySelectorAll(".allPaths").forEach(e => {
     e.addEventListener("mouseover", function(event){
-        event.target.style.fill = "pink"; // Highlight country on hover
-        const name = event.target.id; // Extract country name from the ID
+        event.target.style.fill = "#151e3f"; // Changed fill color on hover to #151e3f
+    });
 
-        window.onmousemove = function(j){
+    e.addEventListener("mouseleave", function(event){
+        event.target.style.fill = "#ececec"; // Reset fill color on mouse leave
+        document.getElementById("name").style.opacity = 0; // Hide the tooltip
+    });
+
+    e.addEventListener("click", function(event) {
+        const name = event.target.id; // Extract country name from the ID
+        getAndDisplayGDPGrowth(name); // Fetch and display GDP growth on click
+
+        window.onclick = function(j){
             const x = j.clientX;
             const y = j.clientY;
             const nameElement = document.getElementById("name");
             nameElement.style.top = y + 20 + "px"; // Positioning the tooltip
             nameElement.style.left = x + 20 + "px";
         };
-
-        document.getElementById("namep").innerText = name; // Displaying country name
-        document.getElementById("name").style.opacity = 1;
-
-        getAndDisplayGDPGrowth(name); // Fetch and display GDP growth on hover
-    });
-
-    e.addEventListener("mouseleave", function(event){
-        event.target.style.fill = "#ececec"; // Reset fill color on mouse leave
-        document.getElementById("name").style.opacity = 0;
-    });
-
-    e.addEventListener("click", function() {
-        getAndDisplayGDPGrowth(e.id); // Fetch and display GDP growth on click
     });
 });
