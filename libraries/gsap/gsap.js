@@ -195,9 +195,9 @@ function animateTextOnly() {
 animateRetireeInflationSections();
 animateTextOnly();
 fadeInFromTop("#unique-cards-container");
-animateCount("#count1", 100);
-animateCount("#count2", 242);
-animateCount("#count3", 3151);
+animateCount("#count1", 60);
+animateCount("#count2", 8);
+animateCount("#count3", 50);
 animateSection("#inflationImpactSection");
 animateSection("#indexMapSection");
 animateListItemsInSection("#awards-section");
