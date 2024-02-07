@@ -22,7 +22,7 @@ This README contains comprehensive documentation and research related to our Ass
 
 ### 3. Project Overview<a name="project-overview"></a>
 
-The **InflaGlobe** project introduces a cutting-edge web-based application designed to showcase real-time and historical GDP growth data for countries and regions. This initiative caters to users interested in economics, finance, and global economic trends, providing valuable insights into economic performance and its impact on various regions.
+The **InflaGlobe** project introduces a cutting-edge web-based application designed to showcase real-time and GDP growth data for countries and regions. This initiative caters to users interested in economics, finance, and global economic trends, providing valuable insights into economic performance and its impact on various regions.
 
 #### Key Features
 
@@ -36,29 +36,21 @@ Through its comprehensive platform, InflaGlobe empowers users to navigate the co
 
 ### 4. Features<a name="features"></a>
 
-#### Key Features
-
 - **Real-time GDP Growth Data:**
   - Stay updated with real-time GDP growth data for countries and regions.
   - Access accurate and timely information on economic performance.
 - **Interactive Map Visualization:**
   - Explore GDP growth rates visually through an interactive map interface.
-  - Compare growth trends across different countries and regions with ease.
-- **Historical Data Trends:**
-  - Analyze historical GDP growth trends to identify patterns and insights.
-  - Gain valuable insights into past economic performance for informed decision-making.
 - **Impact of GDP Growth on Inflation:**
-  - Understand the relationship between GDP growth and inflation.
   - Explore how economic growth influences inflation rates and vice versa.
 - **Educational Resources:**
   - Access educational content and resources related to GDP growth and inflation.
   - Enhance your understanding of economic concepts and trends through articles, guides, and tutorials.
+- **Login Functionality:**
+  - Securely access personalized features and data by logging into your account.
+  - Customize your experience and save preferences for future use.
 
-### 5. Usage<a name="usage"></a>
-
-Provide instructions on how to use InflaGlobe, including installation and any prerequisites. Include sample screenshots or GIFs to demonstrate key features and functionalities.
-
-### 6. Attribution<a name="attribution"></a>
+### 5. Attribution<a name="attribution"></a>
 
 To maintain proper attribution for external source code and data used in your project, here is a list of libraries, APIs, and data sources utilized:
 

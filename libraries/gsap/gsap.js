@@ -21,7 +21,22 @@ function fadeInFromTop(selector) {
 function animateCount(elementId, targetValue) {
   gsap.to(elementId, {
     duration: 1,
-    innerText: targetValue,
+    innerText: targetValue + "%", // Concatenate the percentage sign
+    ease: "power1.out",
+    roundProps: { innerText: 1 }, // Round to 1 decimal place
+    scrollTrigger: {
+      trigger: elementId,
+      start: "center 90%",
+      end: "bottom center",
+      toggleActions: "play none none none",
+    },
+  });
+}
+// Animate counts incrementing upwards
+function animateCountWithoutPercentage(elementId, targetValue) {
+  gsap.to(elementId, {
+    duration: 1,
+    innerText: targetValue, // Concatenate the percentage sign
     ease: "power1.out",
     roundProps: { innerText: 1 }, // Round to 1 decimal place
     scrollTrigger: {
@@ -196,7 +211,7 @@ animateRetireeInflationSections();
 animateTextOnly();
 fadeInFromTop("#unique-cards-container");
 animateCount("#count1", 60);
-animateCount("#count2", 8);
+animateCountWithoutPercentage("#count2", 8);
 animateCount("#count3", 50);
 animateSection("#inflationImpactSection");
 animateSection("#indexMapSection");
