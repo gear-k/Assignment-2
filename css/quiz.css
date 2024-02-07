@@ -1,39 +1,19 @@
-.app{
-    background-color: white;
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
-    border-radius: 10px;
-    padding: 30px;
+.bg-accent {
+  background-color: var(--accent-color) !important;
 }
 
-.app h1{
-    font-size: 25px;
-    color: #001e4d;
-    font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
+.btn-accent {
+  color: #fff !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
-.quiz{
-    padding: 20px 0;
+.btn-accent:hover {
+  color: #fff !important;
+  background-color: darken(var(--accent-color), 10%) !important;
+  border-color: darken(var(--accent-color), 10%) !important;
 }
 
-.quiz h2{
-    font-size: 18px;
-    color:#001e4d;
-    font-weight: 600;
-}
-
-.ans-btn{
-    background:white;
-    color: #222;
-    font-weight: 500;
-    width:100%;
-    border:1px solid #222;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
+.loading-bar-progress {
+  transition: width 0.3s ease;
 }
