@@ -605,4 +605,30 @@ body .offcanvas {
   .pt-lg-9 {
     padding-top: 9rem;
   }
+  .bg-accent {
+    background-color: var(--accent-color) !important;
+  }
+  
+  .btn-accent {
+    color: #fff !important;
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+  }
+  
+  .btn-accent:hover {
+    color: #fff !important;
+    background-color: darken(var(--accent-color), 10%) !important;
+    border-color: darken(var(--accent-color), 10%) !important;
+  }
+  
+  .loading-bar-progress {
+    transition: width 0.3s ease;
+  }
+  
+  #myChart{
+    max-width: 600px; /* Adjust the width as needed */
+    margin-left: 0; /* Align to the left */
+    margin-right: auto; /* Keep it centered on the right side */
+    height: 400px; /* Adjust the height as needed */
+}
 }
