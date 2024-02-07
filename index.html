@@ -53,33 +53,42 @@
             </li>
 
             <div class="me-auto pt-4">
-              <div id="authButtons" class="d-lg-block">
-                <a href="login.html" class="text-decoration-none">
-                  <button
-                    type="button"
-                    class="btn btn-ghostwhite rounded py-2 px-4 border-0 navbtn"
-                  >
-                    Login
-                  </button>
-                </a>
-                <a href="signup.html">
-                  <button
-                    type="button"
-                    class="btn btn-ghostwhite rounded py-2 px-4 border-0 navbtn"
-                  >
-                    Sign Up
-                  </button>
-                </a>
-              </div>
-              <div id="accountButton" class="d-none">
-                <a href="account.html" class="text-decoration-none">
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block auth-buttons">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none account-button">
                   <button
                     type="button"
                     class="btn btn-light rounded py-2 px-4 border-0 navbtn"
                   >
                     Account
                   </button>
-                </a>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Logout
+                  </button>
+                </div>
               </div>
             </div>
           </ul>
@@ -133,7 +142,7 @@
 
               <!-- Auth and Account Buttons -->
               <div class="ms-auto">
-                <div id="authButtons" class="d-lg-block">
+                <div id="authButtons" class="d-lg-block auth-buttons">
                   <a href="login.html" class="text-decoration-none">
                     <button
                       type="button"
@@ -151,15 +160,21 @@
                     </button>
                   </a>
                 </div>
-                <div id="accountButton" class="d-none">
-                  <a href="account.html" class="text-decoration-none">
-                    <button
-                      type="button"
-                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
-                    >
-                      Account
-                    </button>
-                  </a>
+                <div id="accountButton" class="d-none account-button">
+                  <button
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Logout
+                  </button>
                 </div>
               </div>
             </div>
@@ -270,8 +285,9 @@
               class="col-12 col-lg bg-oxfordblue min-vh-lg-100 d-flex flex-column justify-content-center equal-height-lg-down"
             >
               <p class="display-6 col-10 ps-0 py-5 ps-lg-5">
-                Everyday, the average inflation rate is increasing by
-                <span style="font-weight: bold">0.05%</span>.
+                The average inflation rate from 1961 to 2022 was
+                <span id="count4" style="font-weight: bold">2.6%</span>
+                annually.
               </p>
             </div>
           </div>

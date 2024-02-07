@@ -23,7 +23,7 @@
     <!-- CHANGE -->
     <nav data-bs-theme="dark">
       <div
-        class="offcanvas offcanvas-start"
+        class="offcanvas offcanvas-start bg-spacecadet"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -39,89 +39,152 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Home</a>
+            <li class="nav-item offcanvas">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Map</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="map.html">Map</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="aboutus.html">About</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Donate</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="gamepage.html">Game</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Impact</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="impact.html">Impact</a>
             </li>
 
-            <div class="d-lg-block">
-              <br />
-              <button type="button" class="btn btn-light">Login</button>
-              <button type="button" class="btn btn-light">Sign Up</button>
+            <div class="me-auto pt-4">
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block auth-buttons">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none account-button">
+                  <button
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
             </div>
           </ul>
         </div>
       </div>
     </nav>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg fixed-top w-100 py-3"
-        data-bs-theme="dark"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="#">InflaGlobe</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Impact</a>
-              </li>
-            </ul>
-            <div class="d-none d-lg-block">
-              <a href="login.html" class="text-decoration-none">
-                <button
-                  type="button"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Login
-                </button>
-              </a>
-              <a href="signup.html">
-                <button
-                  type="button"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Sign Up
-                </button>
-              </a>
+    <section>
+      <header>
+        <nav
+          class="navbar navbar-expand-lg fixed-top w-100 py-3"
+          data-bs-theme="light"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#">InflaGlobe</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Left Branding or Placeholder for balance -->
+              <div class="me-auto d-none d-lg-block"></div>
+
+              <!-- Centered Navigation Links -->
+              <ul class="navbar-nav ps-6">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gamepage.html">Game</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="impact.html">Impact</a>
+                </li>
+              </ul>
+
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block auth-buttons">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none account-button">
+                  <button
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </section>
     <main>
       <section class="container-fluid pb-5 heroimage">
         <figure>
@@ -134,7 +197,7 @@
         </figure>
         <div class="container-fluid">
           <div class="row align-items-center ps-lg-5">
-            <div class="col-lg-5 custom-padding">
+            <div class="col-lg-5 custom-padding" id="">
               <h1 class="display-1 text-ghost-white bold">
                 Inflation and it's Consequences
               </h1>
@@ -146,7 +209,7 @@
         <div class="container-fluid">
           <div class="row align-items-start text-gunmetal">
             <!-- Text Section -->
-            <div class="col-lg-5">
+            <div class="col-lg-5" id="text-section">
               <div class="py-5 ps-5">
                 <h2 class="display-2 col-10 pb-3 pb-lg-5 bold">
                   Inflation erodes money's value and hinders consumers'
@@ -155,7 +218,7 @@
               </div>
             </div>
 
-            <div class="col-lg-7 col-12 pe-lg-5">
+            <div class="col-lg-7 col-12 pe-lg-5" id="impact-section">
               <div class="row py-5 impact-text-size">
                 <!-- First Column -->
                 <div class="col-lg-6">
@@ -189,11 +252,13 @@
           <div class="row align-items-start text-ghost-white">
             <!-- Statistical Map Text Section -->
             <div
+              id="impactdownwards"
               class="col-12 col-lg-6 bg-spacecadet min-vh-lg-100 d-flex align-items-center"
             >
               <div class="ps-5 py-5">
                 <h2 class="display-4 bold pt-1">
-                  <span class="text-buff">Interest</span> Rates
+                  <span class="text-buff" id="interest-title">Interest</span>
+                  Rates
                 </h2>
                 <div class="col-lg-9">
                   <p class="impact-text-size">
@@ -235,11 +300,13 @@
           </div>
         </div>
       </section>
+
       <section>
         <div class="container-fluid">
           <div class="row align-items-start text-ghost-white">
             <!-- Text Section -->
             <div
+              id="impactdownwards"
               class="col-12 col-lg-6 bg-oldrose min-vh-lg-100 d-flex align-items-center order-lg-2"
             >
               <div class="ps-5 py-5">
@@ -291,6 +358,7 @@
           <div class="row align-items-start text-ghost-white">
             <!-- Statistical Map Text Section -->
             <div
+              id="impactdownwards"
               class="col-12 col-lg-6 bg-spacecadet min-vh-lg-100 d-flex align-items-center"
             >
               <div class="py-5 ps-5">
@@ -339,7 +407,7 @@
         <div class="container-fluid py-lg-9">
           <div class="row align-items-start text-gunmetal">
             <!-- Text Section -->
-            <div class="col-lg-5">
+            <div class="col-lg-5" id="retiree-inflation-text">
               <div class="py-5 ps-5">
                 <h2 class="display-2 col-lg-8 pb-3 pb-lg-5 bold">
                   Retirees face inflation risk with fixed, unchanging incomes.
@@ -347,11 +415,10 @@
               </div>
             </div>
 
-            <div class="col-lg-7 pe-lg-5">
+            <div class="col-lg-7 pe-lg-5" id="retiree-inflation-columns">
               <div class="row py-5 impact-text-size">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                   <i class="bi bi-piggy-bank circle-icon impacticon"></i>
-
                   <p class="bold pt-1">Retirees and Inflation</p>
                   <p>
                     Retirees with fixed incomes can struggle as inflation erodes
@@ -359,7 +426,7 @@
                     life.
                   </p>
                 </div>
-                <div class="col-lg-4 pt-lg-0 pt-5">
+                <div class="col-lg-6 pt-lg-0 pt-5">
                   <i class="bi bi-bar-chart-line circle-icon impacticon"></i>
                   <p class="bold pt-1">Managing Inflation Risk</p>
                   <p>
@@ -370,7 +437,7 @@
                 </div>
               </div>
               <div class="row pb-5 impact-text-size">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                   <i class="bi bi-briefcase circle-icon impacticon"></i>
                   <p class="bold pt-1">Financial Planning for Retirement</p>
                   <p>
@@ -379,7 +446,7 @@
                     strategies help protect against inflation.
                   </p>
                 </div>
-                <div class="col-lg-4 pt-lg-0 pt-5">
+                <div class="col-lg-6 pt-lg-0 pt-5">
                   <i class="bi bi-archive circle-icon impacticon"></i>
                   <p class="bold pt-1">Resources for Retirees</p>
                   <p>
@@ -481,11 +548,11 @@
       </div>
     </div>
 
+    <script src="js/script.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="js/script.js"></script>
-    <script src="libraries/chart/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="libraries/chart/chartData.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="libraries/gsap/gsap.js"></script>
   </body>
 </html>

@@ -1,37 +1,71 @@
+// Scroll animation setup
 gsap.registerPlugin(ScrollTrigger);
-gsap.from("#animated-text", {
-  duration: 1,
-  opacity: 0,
-  y: -50, // Start above its final position and move downwards
-  ease: "power2.out",
-  delay: 0.5,
-  scrollTrigger: {
-    trigger: "#animated-text",
-    start: "top 90%",
-    toggleActions: "play none none none",
-  },
-});
 
-// Targeting the specific section with the ID #sponsors
-const sponsorsSection = document.querySelector("#sponsors");
-
-// Ensuring the section exists before attempting to animate
-if (sponsorsSection) {
-  gsap.from(sponsorsSection.querySelectorAll(".col"), {
-    duration: 1,
+// Animate elements fading in from the top
+function fadeInFromTop(selector) {
+  gsap.from(selector, {
     opacity: 0,
-    y: -30, // Elements start above their final position and move downwards
+    y: -20,
+    duration: 0.5,
     stagger: 0.2,
+    ease: "power1.out",
     scrollTrigger: {
-      trigger: sponsorsSection,
-      start: "top 80%",
-      end: "bottom 20%",
-      toggleActions: "play none none reverse",
+      trigger: selector,
+      start: "top 90%",
+      toggleActions: "play none none none",
     },
   });
 }
 
-// Adjusted function to animate blocks with headings and paragraphs
+// Animate counts incrementing upwards
+function animateCount(elementId, targetValue) {
+  gsap.to(elementId, {
+    duration: 1,
+    innerText: targetValue,
+    ease: "power1.out",
+    roundProps: { innerText: 1 }, // Round to 1 decimal place
+    scrollTrigger: {
+      trigger: elementId,
+      start: "center 90%",
+      end: "bottom center",
+      toggleActions: "play none none none",
+    },
+  });
+}
+
+// Animate specific section elements
+function animateSection(sectionId) {
+  gsap.from(sectionId, {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: sectionId,
+      start: "top 80%",
+    },
+  });
+}
+
+function animateListItemsInSection(sectionId) {
+  // Target the list items with class "mb-2" within the specified section
+  const listItems = document.querySelectorAll(`${sectionId} .mb-2`);
+
+  // Loop through each list item and set up ScrollTrigger animation
+  listItems.forEach((item) => {
+    gsap.from(item, {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+}
+// Animate blocks with headings and paragraphs
 function animateBlocks(className) {
   gsap.utils.toArray(className).forEach((block) => {
     const headings = block.querySelectorAll("h4");
@@ -40,24 +74,22 @@ function animateBlocks(className) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: block,
-        start: "top 90%", // Adjust as needed
+        start: "top 90%",
         toggleActions: "play none none reverse",
       },
     });
 
-    // Animate headings from above
     tl.fromTo(
       headings,
-      { y: -20, opacity: 0 }, // Start from above
+      { y: -20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, stagger: 0.2 }
     );
 
-    // Animate paragraphs right after headings from above
     tl.fromTo(
       paragraphs,
-      { y: -20, opacity: 0 }, // Start from above
+      { y: -20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, stagger: 0.2 },
-      "-=0.1" // Overlap timing slightly for a smooth transition
+      "-=0.1"
     );
   });
 }
@@ -73,70 +105,102 @@ gsap.to("#parallaxHero .heroimage-bg-index", {
   },
 });
 
-function fadeInFromTop(selector) {
-  gsap.from(selector, {
-    // Starting opacity
+function animateFadeInSections() {
+  // Target the columns and text sections
+  const columns = document.querySelectorAll("#impact-section .col-lg-6");
+  const textSection = document.querySelector("#text-section");
+
+  // Set up animation for the columns with stagger effect
+  gsap.from(columns, {
     opacity: 0,
-    // Starting position above the final position
-    y: -20,
-    // Duration of the animation in seconds
-    duration: 0.5,
-    // Stagger the start of each element's animation for a sequential effect
-    stagger: 0.2,
-    // Easing function for a smooth effect
-    ease: "power1.out",
-    // ScrollTrigger to start the animation when the elements come into viewport
+    y: -50,
+    duration: 1,
+    stagger: 0.2, // Stagger the animations by 0.2 seconds
     scrollTrigger: {
-      trigger: selector,
-      start: "top 90%", // Start the animation when the top of the element hits 90% of the viewport height
-      toggleActions: "play none none none", // Play the animation when scrolling forward
+      trigger: columns[0], // Use the first column as the trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
     },
   });
-}
 
-// Call the function with the container of your cards
-fadeInFromTop("#unique-cards-container"); // Replace '#unique-cards-container' with your actual container ID or class
-
-// Function to animate a section with elements moving from up to downwards
-function animateSection(sectionId) {
-  gsap.from(sectionId, {
+  // Set up animation for the text section with a delay
+  gsap.from(textSection, {
     opacity: 0,
-    y: -50, // Start 50 pixels above the final position
-    duration: 1, // Animation duration in seconds
+    y: -50,
+    duration: 1,
+    delay: 0.5, // Delay the animation by 0.5 seconds
     scrollTrigger: {
-      trigger: sectionId,
-      start: "top 90%", // Animation starts when the top of the section hits 90% of the viewport
-      toggleActions: "play none none none", // Play the animation when the section comes into view
+      trigger: textSection,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+}
+function animateRetireeInflationSections() {
+  // Target the columns and text sections
+  const columns = document.querySelectorAll(
+    "#retiree-inflation-columns .col-lg-6"
+  );
+  const textSection = document.querySelector("#retiree-inflation-text");
+
+  // Set up animation for the columns with stagger effect
+  gsap.from(columns, {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    stagger: 0.2, // Stagger the animations by 0.2 seconds
+    scrollTrigger: {
+      trigger: columns[0], // Use the first column as the trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // Set up animation for the text section with a delay
+  gsap.from(textSection, {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    delay: 0.5, // Delay the animation by 0.5 seconds
+    scrollTrigger: {
+      trigger: textSection, // Use the text section as the trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
     },
   });
 }
 
-// JavaScript:
-// Create a function to define the animation for each element
-function animateCount(elementId, targetValue) {
-  gsap.to(elementId, {
-    duration: 1, // Animation duration in seconds
-    innerText: targetValue, // Target value
-    ease: "power1.out", // Easing function
-    roundProps: "innerText", // Ensure this is a string, not an object
-    scrollTrigger: {
-      trigger: elementId, // Element that triggers the animation
-      start: "center 90%", // When the center of the element is 90% from the top of the viewport
-      end: "bottom center", // When the bottom of the element is at the center of the viewport
-      toggleActions: "play none none none", // Play the animation once without reversing
-    },
+function animateTextOnly() {
+  // Target the text elements within the text section
+  const textElements = document.querySelectorAll(
+    "#impactdownwards #interest-title .impact-text-size, #impactdownwards .impact-list "
+  );
+
+  // Set up animation for the text elements
+  textElements.forEach((element) => {
+    gsap.from(element, {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
   });
 }
-
-// Call the animateCount function for each element you want to animate
+// Call animation functions
+animateRetireeInflationSections();
+animateTextOnly();
+fadeInFromTop("#unique-cards-container");
 animateCount("#count1", 100);
 animateCount("#count2", 242);
 animateCount("#count3", 3151);
-
-// Call the function for each section
 animateSection("#inflationImpactSection");
 animateSection("#indexMapSection");
-
-// Call the function for each row
+animateListItemsInSection("#awards-section");
 animateBlocks(".row.my-4");
 animateBlocks(".row.pt-lg-5");
+animateFadeInSections();
