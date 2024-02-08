@@ -144,10 +144,18 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(updateData => {
             console.log('Leaderboard Update Success:', updateData);
+            // Display completion message
+            const quizContainer = document.querySelector(".quiz-container");
+            quizContainer.innerHTML = `<div class="text-center"><p>Quiz completed! Redirecting to leaderboard...</p></div>`;
+        
+            // Redirect to leaderboard.html after a delay
+            setTimeout(() => {
+                window.location.href = 'leaderboard.html';
+            }, 3000); // Adjust the delay here as needed (3000 milliseconds = 3 seconds)
         })
         .catch(error => {
             console.error('Error:', error);
         });
-    }
+    }        
     
 });
