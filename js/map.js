@@ -32,52 +32,54 @@ $(document).ready(function () {
 
   function onClick(e) {
     var layer = e.target;
-  
+
     // Set style as before
     layer.setStyle({
       weight: 0,
       fillColor: "#ececec",
       fillOpacity: 0.7,
     });
-  
+
     // Prevent the focus state as before
     if (layer._path) {
       layer._path.setAttribute("outline", "none");
     }
-  
+
     // Additional logic as before
     if (e.target.feature.properties && e.target.feature.properties.name) {
       getAndDisplayGDPGrowth(e.target.feature.properties.name, layer);
     }
-  
+
     // Only for touchscreen devices
-    if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+    if ("ontouchstart" in window || navigator.msMaxTouchPoints) {
       var latlng = e.latlng;
-      var tooltipDirection = 'top';
-  
+      var tooltipDirection = "top";
+
       // Adjust tooltip direction based on screen space
       var point = map.latLngToContainerPoint(latlng);
       var mapSize = map.getSize();
-  
-      if (point.x > mapSize.x - 40) { // Adjust values based on your tooltip size
-        tooltipDirection = 'left';
+
+      if (point.x > mapSize.x - 40) {
+        // Adjust values based on your tooltip size
+        tooltipDirection = "left";
       } else if (point.x < 40) {
-        tooltipDirection = 'right';
+        tooltipDirection = "right";
       } else if (point.y > mapSize.y - 40) {
-        tooltipDirection = 'top';
+        tooltipDirection = "top";
       } else if (point.y < 40) {
-        tooltipDirection = 'bottom';
+        tooltipDirection = "bottom";
       }
-  
+
       // Position the tooltip
-      layer.bindTooltip(`Country: ${e.target.feature.properties.name}`, {
-        permanent: true,
-        direction: tooltipDirection,
-        offset: L.point(0, -20)
-      }).openTooltip(latlng);
+      layer
+        .bindTooltip(`Country: ${e.target.feature.properties.name}`, {
+          permanent: true,
+          direction: tooltipDirection,
+          offset: L.point(0, -20),
+        })
+        .openTooltip(latlng);
     }
   }
-  
 
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
