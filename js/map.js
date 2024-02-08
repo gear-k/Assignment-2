@@ -30,28 +30,54 @@ $(document).ready(function () {
     }
   }
 
-  // Function to handle click on feature (e.g., country)
   function onClick(e) {
     var layer = e.target;
-
-    // Set style to remove any border or outline
+  
+    // Set style as before
     layer.setStyle({
-      weight: 0, // No border
-      fillColor: "#ececec", // Or any fill color you prefer
-      fillOpacity: 0.7, // Adjust opacity as needed
+      weight: 0,
+      fillColor: "#ececec",
+      fillOpacity: 0.7,
     });
-
-    // Prevent the click from setting the layer into a "focused" state that might cause an outline
+  
+    // Prevent the focus state as before
     if (layer._path) {
-      // Check if the layer is SVG element
       layer._path.setAttribute("outline", "none");
     }
-
-    // Additional logic for handling click event, such as updating tooltip content
+  
+    // Additional logic as before
     if (e.target.feature.properties && e.target.feature.properties.name) {
       getAndDisplayGDPGrowth(e.target.feature.properties.name, layer);
     }
+  
+    // Only for touchscreen devices
+    if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+      var latlng = e.latlng;
+      var tooltipDirection = 'top';
+  
+      // Adjust tooltip direction based on screen space
+      var point = map.latLngToContainerPoint(latlng);
+      var mapSize = map.getSize();
+  
+      if (point.x > mapSize.x - 40) { // Adjust values based on your tooltip size
+        tooltipDirection = 'left';
+      } else if (point.x < 40) {
+        tooltipDirection = 'right';
+      } else if (point.y > mapSize.y - 40) {
+        tooltipDirection = 'top';
+      } else if (point.y < 40) {
+        tooltipDirection = 'bottom';
+      }
+  
+      // Position the tooltip
+      layer.bindTooltip(`Country: ${e.target.feature.properties.name}`, {
+        permanent: true,
+        direction: tooltipDirection,
+        offset: L.point(0, -20)
+      }).openTooltip(latlng);
+    }
   }
+  
 
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
