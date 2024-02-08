@@ -161,14 +161,3 @@ window.addEventListener("beforeunload", function () {
     audioPlayer.currentTime.toString()
   );
 });
-
-// Redirect to account page when account button is clicked
-document.addEventListener("DOMContentLoaded", function () {
-  var accountButtons = document.getElementsByClassName("account-button");
-
-  Array.from(accountButtons).forEach(function (accountButton) {
-    accountButton.addEventListener("click", function () {
-      window.location.href = "account.html";
-    });
-  });
-});
