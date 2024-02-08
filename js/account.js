@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var userId = localStorage.getItem("userId");
     if (!userId) {
         logout();
-        return; // Stop further execution
+        return;
     }
 
     var apiKey = "65be5892c1ff3a2d670fe5a0";
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("username").textContent = data.username || 'N/A';
         document.getElementById("email").textContent = data.email || 'N/A';
         if (data.leaderboard === 5) {
-            document.getElementById("username").style.color = "gold";
+            document.getElementById("username").style.color = "gold"; // If User has 5 points in quiz, they will get a gold username
         }
         document.getElementById("quizScore").textContent = data.leaderboard || 'N/A';
     })

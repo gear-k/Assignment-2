@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetchLeaderboardData();
   });
-  
+  //Fetch from database
   function fetchLeaderboardData() {
     fetch("https://signup-828c.restdb.io/rest/signup", {
       method: "GET",
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error fetching data:", error);
       });
   }
-  
+  //Fill in leaderboard
   function populateLeaderboard(data) {
     const tbody = document.getElementById("leaderboardBody");
     if (!tbody) {
