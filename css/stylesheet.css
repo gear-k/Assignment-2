@@ -610,9 +610,7 @@ svg path:hover {
   outline: none !important;
   border: none !important;
 }
-.nav-link {
-  color: white !important;
-}
+
 .bg-accent {
   background-color: var(--accent-color) !important;
 }
@@ -638,6 +636,23 @@ svg path:hover {
   margin-left: 0; /* Align to the left */
   margin-right: auto; /* Keep it centered on the right side */
   height: 400px; /* Adjust the height as needed */
+}
+
+.bg-gold {
+  background-color: gold !important;
+}
+
+.bg-silver {
+  background-color: silver !important;
+}
+
+.bg-bronze {
+  background-color: #cd7f32 !important; /* Bronze color */
+}
+
+.table > :not(caption) > * > * {
+  background-color: transparent; /* Override to remove the background color */
+  border: 1px solid rgb(61, 61, 61);
 }
 
 @media (min-width: 991px) {
@@ -675,15 +690,4 @@ svg path:hover {
   .pt-lg-9 {
     padding-top: 9rem;
   }
-}
-.bg-gold {
-  background-color: gold !important;
-}
-
-.bg-silver {
-  background-color: silver !important;
-}
-
-.bg-bronze {
-  background-color: #cd7f32 !important; /* Bronze color */
 }
