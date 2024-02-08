@@ -13,6 +13,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg width='200px' height='200px' xmlns='http://www.w3.org/2000/svg'%3E%3C!-- Background circle for the globe --%3E%3Ccircle cx='100' cy='100' r='90' fill='blue' /%3E%3C!-- Enhanced and additional shapes for more green continents --%3E%3Cpath d='M60,40 Q80,20 100,40 Q90,10 120,40 Q130,20 140,40 Q120,50 115,70 Q105,40 95,70 Q90,50 60,40' fill='green'/%3E%3Cpath d='M40,120 Q50,100 70,120 Q80,110 90,130 Q110,120 130,140 Q100,150 70,130 Q50,140 40,120' fill='green'/%3E%3Cpath d='M150,100 Q160,80 170,100 Q180,90 190,110 Q170,120 150,100' fill='green'/%3E%3C/svg%3E%0A"
+    />
     <title>About Us</title>
   </head>
   <body>
@@ -36,14 +41,14 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item offcanvas">
+            <li class="nav-item border-bottom-offcanvas">
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item border-bottom-offcanvas">
               <a class="nav-link" href="map.html">Map</a>
             </li>
             <li class="nav-item border-bottom-offcanvas">
-              <a class="nav-link" href="aboutus.html">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item border-bottom-offcanvas">
               <a class="nav-link" href="gamepage.html">Game</a>
@@ -102,7 +107,7 @@
           data-bs-theme="light"
         >
           <div class="container">
-            <a class="navbar-brand" href="#">InflaGlobe</a>
+            <a class="navbar-brand" href="index.html">InflaGlobe</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -189,7 +194,7 @@
           <!-- Text Content Side -->
           <div class="col-lg-5 ps-lg-5 custom-padding-about">
             <h1 class="display-1 bold">About Us</h1>
-            <h6 class="display-2">Ryan Sim Ze Ying</h6>
+            <h6 class="display-2">Who are We?</h6>
           </div>
           <div class="px-lg-5">
             <div class="align-items-end d-flex flex-column">
@@ -202,7 +207,7 @@
               </a>
             </div>
 
-            <img src="images/debttearusapart.jpg" class="img-fluid" />
+            <img src="images/globe.avif" class="img-fluid" />
           </div>
         </div>
       </section>
@@ -225,14 +230,14 @@
               <div class="row py-5">
                 <div class="col">
                   <img
-                    src="images/impact1.jpg"
+                    src="images/graph.jpg"
                     class="img-fluid"
                     alt="Description of Image 1"
                   />
                 </div>
                 <div class="col">
                   <img
-                    src="images/impact1.jpg"
+                    src="images/newspaper.jpg"
                     class="img-fluid rounded-bottom-right"
                     alt="Description of Image 2"
                   />
@@ -283,7 +288,10 @@
         </div>
       </section>
       <section>
-        <div id="awards-section" class="container-fluid py-5 ps-5">
+        <div
+          id="awards-section"
+          class="container-fluid py-5 ps-5 awards-section"
+        >
           <div class="row">
             <!-- Column for the heading -->
             <div class="col-md-6">
@@ -309,7 +317,6 @@
         </div>
       </section>
     </main>
-    <!-- footer -->
     <div class="container-fluid footer text-ghost-white">
       <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
@@ -323,8 +330,8 @@
               <p>InflaGlobe &copy; 2024</p>
               <p>
                 info@inflaglobe.org<br />
-                123 Your Street, Your City, Your Country<br />
-                <span class="custom-underline">(65) 90193819</span>
+                10 Bayfront Avenue, Marina Bay, Singapore 018956<br />
+                <span class="custom-underline">(65) 6688 8868</span>
               </p>
             </address>
           </div>
@@ -365,16 +372,32 @@
             <h5>Social Media</h5>
             <ul class="nav flex-column link-offset-1">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 footer-sections">Instagram</a>
+                <a
+                  href="https://www.instagram.com/"
+                  class="nav-link p-0 footer-sections"
+                  >Instagram</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 footer-sections">X</a>
+                <a
+                  href="https://twitter.com/"
+                  class="nav-link p-0 footer-sections"
+                  >X</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 footer-sections">Facebook</a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="nav-link p-0 footer-sections"
+                  >Facebook</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 footer-sections">TikTok</a>
+                <a
+                  href="https://www.tiktok.com/"
+                  class="nav-link p-0 footer-sections"
+                  >TikTok</a
+                >
               </li>
             </ul>
           </div>
