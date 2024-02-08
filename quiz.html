@@ -21,7 +21,7 @@
     <!-- CHANGE -->
     <nav data-bs-theme="dark">
       <div
-        class="offcanvas offcanvas-start"
+        class="offcanvas offcanvas-start bg-spacecadet"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -37,89 +37,152 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Home</a>
+            <li class="nav-item offcanvas">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Map</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="map.html">Map</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="aboutus.html">About</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Donate</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="gamepage.html">Game</a>
             </li>
-            <li class="nav-item border-bottom">
-              <a class="nav-link" href="#">Impact</a>
+            <li class="nav-item border-bottom-offcanvas">
+              <a class="nav-link" href="impact.html">Impact</a>
             </li>
 
-            <div class="d-lg-block">
-              <br />
-              <button type="button" class="btn btn-light">Login</button>
-              <button type="button" class="btn btn-light">Sign Up</button>
+            <div class="me-auto pt-4">
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block auth-buttons">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none account-button">
+                  <button
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn logoutbtn"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
             </div>
           </ul>
         </div>
       </div>
     </nav>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg fixed-top w-100 py-3"
-        data-bs-theme="light"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="#">InflaGlobe</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto align-items-lg-center ps-5">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Impact</a>
-              </li>
-            </ul>
-            <div class="d-none d-lg-block">
-              <a href="login.html" class="text-decoration-none">
-                <button
-                  type="button"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Login
-                </button>
-              </a>
-              <a href="signup.html">
-                <button
-                  type="submit"
-                  class="btn btn-darkerblue py-2 px-4 border-0"
-                >
-                  Sign Up
-                </button>
-              </a>
+    <section>
+      <header>
+        <nav
+          class="navbar navbar-expand-lg fixed-top w-100 py-3"
+          data-bs-theme="light"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#">InflaGlobe</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Left Branding or Placeholder for balance -->
+              <div class="me-auto d-none d-lg-block"></div>
+
+              <!-- Centered Navigation Links -->
+              <ul class="navbar-nav ps-6">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gamepage.html">Game</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="impact.html">Impact</a>
+                </li>
+              </ul>
+
+              <!-- Auth and Account Buttons -->
+              <div class="ms-auto">
+                <div id="authButtons" class="d-lg-block auth-buttons">
+                  <a href="login.html" class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="signup.html">
+                    <button
+                      type="button"
+                      class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                </div>
+                <div id="accountButton" class="d-none account-button">
+                  <button
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn"
+                  >
+                    Account
+                  </button>
+
+                  <button
+                    id="logoutButton"
+                    type="button"
+                    class="btn btn-spacecadet rounded py-2 px-4 border-0 navbtn logoutbtn"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </section>
     <div
       class="container py-5 d-flex align-items-center justify-content-center"
       style="min-height: 100vh"
@@ -221,22 +284,22 @@
         </button>
       </div>
     </div>
-    <div id="loginForm" class="mt-4" style="display: none;">
+    <div id="loginForm" class="mt-4" style="display: none">
       <h4 class="text-center">Enter your details to submit your score</h4>
       <form id="userCredentialsForm">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="username" required>
+          <input type="text" class="form-control" id="username" required />
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" required>
+          <input type="password" class="form-control" id="password" required />
         </div>
-        <button type="submit" class="btn btn-primary w-100">Submit Score</button>
+        <button type="submit" class="btn btn-primary w-100">
+          Submit Score
+        </button>
       </form>
     </div>
-  </div>
-</div>
 
     <div class="container-fluid footer text-ghost-white">
       <div class="container">
