@@ -6,11 +6,6 @@ document
     var email = document.getElementById("loginEmail").value;
     var password = document.getElementById("loginPassword").value;
 
-    // Ideally, send a POST request with credentials to your server here
-    // The server should handle authentication and respond accordingly
-
-    // For demonstration, we're using your existing GET request logic
-    // Remember, this is not secure for real-world applications
     var apiKey = "65be5892c1ff3a2d670fe5a0";
     var apiUrl =
       'https://signup-828c.restdb.io/rest/signup?q={"email":"' +
@@ -31,14 +26,21 @@ document
         return response.json();
       })
       .then((data) => {
-        console.log("Response Data: ", data); // For debugging
+        console.log("Response Data: ", data);
 
         if (data.length > 0 && data[0].password === password) {
+          // Login Successful
           alert("Login Successful");
+
+          // Store login status and user information in localStorage
           localStorage.setItem("isLoggedIn", "true");
-          localStorage.setItem("userId", data[0]._id); // Storing user ID
+          localStorage.setItem("userId", data[0]._id);
           localStorage.setItem("sessionToken", data[0].sessionToken);
+
+          // Redirect to index.html
+          window.location.href = "index.html";
         } else {
+          // Login Failed
           alert("Login Failed: Incorrect email or password");
         }
       })

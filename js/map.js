@@ -75,7 +75,7 @@ $(document).ready(function () {
   }
 
   // Load the GeoJSON file and add it to the map
-  $.getJSON("../data/custom.geo.json", function (geoJsonData) {
+  $.getJSON("../json/data/custom.geo.json", function (geoJsonData) {
     geojson = L.geoJSON(geoJsonData, {
       style: function (feature) {
         return { color: "transparent", fillColor: "#ececec" };
