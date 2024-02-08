@@ -83,7 +83,7 @@
                     </button>
                   </a>
                 </div>
-                <a href="account.html">
+                <a href="account.html" class="no-underline">
                   <button
                     id="accountButton"
                     type="button"
@@ -91,6 +91,7 @@
                   >
                     Account
                   </button>
+                  <div class="pt-2"></div>
                 </a>
                 <button
                   id="logoutButton"
@@ -112,7 +113,10 @@
           data-bs-theme="light"
         >
           <div class="container">
-            <a class="navbar-brand" href="index.html">InflaGlobe</a>
+            <a class="navbar-brand" href="index.html">
+              <span class="">InflaGlobe</span>
+              <!-- This will hide the text on 'lg' and smaller screens -->
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -139,6 +143,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="map.html">Map</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About</a>
                 </li>
@@ -319,7 +324,7 @@
         </footer>
       </div>
     </div>
-    <audio id="audioPlayer" src="audio/pianomoment.mp3"></audio>
+
     <script src="js/script.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -330,6 +335,5 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
-    <script src="js/account.js"></script>
   </body>
 </html>
