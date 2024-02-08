@@ -11,6 +11,8 @@ window.addEventListener("resize", function () {
     }
   }
 });
+
+// Navbar scroll effect
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
@@ -75,14 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Toggle visibility of authentication and account buttons based on login status
 document.addEventListener("DOMContentLoaded", () => {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-  // Use querySelectorAll to get all elements with the class
   const authButtons = document.querySelectorAll(".auth-buttons");
   const accountButtons = document.querySelectorAll(".account-button");
 
-  // Loop through all elements and apply changes
   authButtons.forEach((btn) => {
     if (isLoggedIn === "true") {
       btn.classList.add("d-none");
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   accountButtons.forEach((btn) => {
     if (isLoggedIn === "true") {
       btn.classList.remove("d-none");
-      btn.classList.add("d-block"); // Use 'd-flex' or 'd-inline-block' if necessary
+      btn.classList.add("d-block");
     } else {
       btn.classList.add("d-none");
       btn.classList.remove("d-block", "d-flex", "d-inline-block");
@@ -104,20 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Logout functionality
 document.addEventListener("DOMContentLoaded", () => {
-  // Get all elements with the class name "logoutbtn"
+  // Select all elements with the class "logoutbtn"
   const logoutButtons = document.querySelectorAll(".logoutbtn");
 
-  // Add click event listener to each logout button
+  // Add a click event listener to each logout button
   logoutButtons.forEach((logoutButton) => {
-    logoutButton.addEventListener("click", () => {
-      // Remove isLoggedIn status from localStorage
+    logoutButton.addEventListener("click", (event) => {
+      // Prevent default action for the button (if it's a submit button or a link)
+      event.preventDefault();
+
+      // Remove 'isLoggedIn' status from localStorage
       localStorage.removeItem("isLoggedIn");
 
-      // Optionally, perform any additional logout-related tasks here
-
-      // Redirect the user to the login page or any other desired destination
-      window.location.href = "index.html";
+      // Redirect to the login page
+      window.location.href = "login.html";
     });
   });
 });
@@ -126,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
 var audioPlayer = document.getElementById("audioPlayer");
 var toggleButtonIcon = document.querySelector("#toggleButton i");
 
-// Check if the audio was playing on the last visit
 var isAudioPlaying = sessionStorage.getItem("isAudioPlaying");
 var playbackPosition = parseFloat(sessionStorage.getItem("playbackPosition"));
 
@@ -135,7 +137,7 @@ if (isAudioPlaying === "true" && !isNaN(playbackPosition)) {
   audioPlayer.play();
   toggleButtonIcon.classList.remove("bi-volume-mute-fill");
   toggleButtonIcon.classList.add("bi-volume-up-fill");
-  audioPlayer.volume = 0.1; // Set volume to 0.1 (10%)
+  audioPlayer.volume = 0.1;
 }
 
 document.getElementById("toggleButton").addEventListener("click", function () {
@@ -143,7 +145,7 @@ document.getElementById("toggleButton").addEventListener("click", function () {
     audioPlayer.play();
     toggleButtonIcon.classList.remove("bi-volume-mute-fill");
     toggleButtonIcon.classList.add("bi-volume-up-fill");
-    audioPlayer.volume = 0.1; // Set volume to 0.1 (10%)
+    audioPlayer.volume = 0.1;
     sessionStorage.setItem("isAudioPlaying", "true");
   } else {
     audioPlayer.pause();
