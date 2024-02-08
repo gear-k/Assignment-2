@@ -26,24 +26,19 @@ function getAndDisplayGDPGrowth(place) {
 // Event listeners for each path (country)
 document.querySelectorAll(".allPaths").forEach(e => {
     e.addEventListener("mouseover", function(event){
+        const name = event.target.id; // Extract country name from the ID
+        getAndDisplayGDPGrowth(name); // Fetch and display GDP growth on hover
         event.target.style.fill = "#151e3f"; // Changed fill color on hover to #151e3f
+
+        // Positioning the tooltip
+        const nameElement = document.getElementById("name");
+        nameElement.style.top = (event.clientY + 20) + "px"; 
+        nameElement.style.left = (event.clientX + 20) + "px";
+        nameElement.style.opacity = 1;
     });
 
     e.addEventListener("mouseleave", function(event){
         event.target.style.fill = "#ececec"; // Reset fill color on mouse leave
         document.getElementById("name").style.opacity = 0; // Hide the tooltip
-    });
-
-    e.addEventListener("click", function(event) {
-        const name = event.target.id; // Extract country name from the ID
-        getAndDisplayGDPGrowth(name); // Fetch and display GDP growth on click
-
-        window.onclick = function(j){
-            const x = j.clientX;
-            const y = j.clientY;
-            const nameElement = document.getElementById("name");
-            nameElement.style.top = y + 20 + "px"; // Positioning the tooltip
-            nameElement.style.left = x + 20 + "px";
-        };
     });
 });

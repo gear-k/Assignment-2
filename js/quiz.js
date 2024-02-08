@@ -99,54 +99,61 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle the form submission
     function submitUserCredentials(event) {
         event.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
         authenticateAndUpdateScore(username, password, score);
     }
 
     // Authenticate user and update leaderboard score
     function authenticateAndUpdateScore(username, password, leaderboardScore) {
-        // Step 1: Authenticate User
-        // Replace with your actual API endpoint and method for authentication
-        fetch('https://signup-828c.restdb.io/rest/signup', {
-            method: 'POST', // or GET, depending on your API
+        var apiKey = "65be5892c1ff3a2d670fe5a0";
+        var apiUrl =
+            'https://signup-828c.restdb.io/rest/signup?q={"username":"' +
+            encodeURIComponent(username) + '"}';
+    
+        fetch(apiUrl, {
+            method: "GET",
             headers: {
-                'Content-Type': 'application/json',
-                "x-apikey": "65be5892c1ff3a2d670fe5a0",
+                "Content-Type": "application/json",
+                "x-apikey": apiKey,
             },
-            body: JSON.stringify({password: password , username: username})
         })
-        .then(response => {
+        .then((response) => {
             if (!response.ok) {
-                throw new Error(`Authentication failed: ${response.status}`);
+                throw new Error("Network response was not ok");
             }
-            return response.json(); // Assuming the response includes user ID or similar
+            return response.json();
         })
-        .then(userData => {
-            // Step 2: Update Leaderboard Score
-            // Replace with your actual API endpoint for updating the leaderboard score
-            return fetch('https://signup-828c.restdb.io/rest/signup', {
-                method: 'PUT', // or PATCH
-                headers: {
-                    'Content-Type': 'application/json',
-                    "x-apikey": "65be5892c1ff3a2d670fe5a0", 
-                },
-                body: JSON.stringify({ userId: userData.id, leaderboard: leaderboardScore })
-            });
+        .then((data) => {
+            if (data.length > 0 && data[0].password === password) {
+                // Construct the update URL using username
+                const updateUrl = `https://signup-828c.restdb.io/rest/signup?q={"username":"${encodeURIComponent(username)}"}`;
+                return fetch(updateUrl, {
+                    method: 'PUT', // or 'PATCH'
+                    headers: {
+                        'Content-Type': 'application/json',
+                        "x-apikey": apiKey,
+                    },
+                    body: JSON.stringify({ leaderboard: leaderboardScore })
+                });
+            } else {
+                throw new Error("Authentication failed: Incorrect username or password");
+            }
         })
         .then(updateResponse => {
             if (!updateResponse.ok) {
                 throw new Error(`Update failed: ${updateResponse.status}`);
             }
             return updateResponse.json();
-        })
+        })  
         .then(updateData => {
             console.log('Leaderboard Update Success:', updateData);
-            // location.reload(); // Or handle success as needed
+            // Handle success as needed
         })
         .catch(error => {
             console.error('Error:', error);
         });
     }
+    
 
 });
