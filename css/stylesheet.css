@@ -655,6 +655,22 @@ svg path:hover {
   border: 1px solid rgb(61, 61, 61);
 }
 
+.sticky-circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
 @media (min-width: 991px) {
   /* Adjust 991px based on the exact lg breakpoint you are using, this targets screens smaller than lg */
   .min-vh-lg-100 {
