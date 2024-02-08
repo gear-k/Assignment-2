@@ -570,6 +570,66 @@ body .offcanvas {
 .textcard {
   font-size: 1.5rem;
 }
+
+.object-cover {
+  object-fit: center;
+}
+
+svg path {
+  cursor: pointer;
+}
+svg path:hover {
+  fill: #151e3f;
+}
+
+#name {
+  position: absolute;
+  background-color: white;
+  width: fit-content;
+  opacity: 0;
+  border-radius: 5px;
+  border: 3px solid black;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+#api {
+  position: absolute;
+  background-color: white;
+  width: fit-content;
+  border-radius: 5px;
+  border: 3px solid black;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.btn-accent {
+  color: #fff !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.btn-accent:hover {
+  color: #fff !important;
+  background-color: darken(var(--accent-color), 10%) !important;
+  border-color: darken(var(--accent-color), 10%) !important;
+}
+
+.loading-bar-progress {
+  transition: width 0.3s ease;
+}
+
+#myChart {
+  max-width: 600px; /* Adjust the width as needed */
+  margin-left: 0; /* Align to the left */
+  margin-right: auto; /* Keep it centered on the right side */
+  height: 400px; /* Adjust the height as needed */
+}
+
 @media (min-width: 991px) {
   /* Adjust 991px based on the exact lg breakpoint you are using, this targets screens smaller than lg */
   .min-vh-lg-100 {
@@ -605,30 +665,4 @@ body .offcanvas {
   .pt-lg-9 {
     padding-top: 9rem;
   }
-  .bg-accent {
-    background-color: var(--accent-color) !important;
-  }
-  
-  .btn-accent {
-    color: #fff !important;
-    background-color: var(--accent-color) !important;
-    border-color: var(--accent-color) !important;
-  }
-  
-  .btn-accent:hover {
-    color: #fff !important;
-    background-color: darken(var(--accent-color), 10%) !important;
-    border-color: darken(var(--accent-color), 10%) !important;
-  }
-  
-  .loading-bar-progress {
-    transition: width 0.3s ease;
-  }
-  
-  #myChart{
-    max-width: 600px; /* Adjust the width as needed */
-    margin-left: 0; /* Align to the left */
-    margin-right: auto; /* Keep it centered on the right side */
-    height: 400px; /* Adjust the height as needed */
-}
 }
