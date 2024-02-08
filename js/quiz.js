@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Show or hide the back button
             document.getElementById("back").classList.toggle("d-none", currentQuestionIndex === 0);
         } else {
-            // Display the score and show login form
+            // Display the score
             displayScore();
         }
     }
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             displayQuestion();
             updateProgressBar();
         } else {
-            // Display the score and show login form
+            // Display the score
             displayScore();
         }
     }
@@ -57,26 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Display the final score and user credentials form
+    // Display the final score
     function displayScore() {
         const quizContainer = document.querySelector(".quiz-container");
         quizContainer.innerHTML = `
             <div class="result-container text-center">
                 <h2>Your Score: ${score}/${questions.length}</h2>
-                <form id="userCredentialsForm">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Score</button>
-                </form>
+                <button id="submitScoreButton" class="btn btn-primary">Submit Score</button>
             </div>`;
 
-        document.getElementById("userCredentialsForm").addEventListener("submit", submitUserCredentials);
+        document.getElementById("submitScoreButton").addEventListener("click", submitScore);
     }
 
     // Update the progress bar based on the current question
@@ -96,66 +86,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for back button
     document.getElementById("back").addEventListener("click", goBack);
 
-    // Handle the form submission
-    function submitUserCredentials(event) {
-        event.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        authenticateAndUpdateScore(username, password, score);
+    // Submit score
+    function submitScore() {
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const userId = localStorage.getItem("userId");
+        const sessionToken = localStorage.getItem("sessionToken");
+
+        if (isLoggedIn === "true" && userId && sessionToken) {
+            updateLeaderboard(userId, score, sessionToken);
+        } else {
+            alert("Please log in to submit your score.");
+            // Redirect to login page or show login form
+            // window.location.href = 'login.html';
+        }
     }
 
-    function authenticateAndUpdateScore(username, password, leaderboardScore) {
+    function updateLeaderboard(userId, leaderboardScore, sessionToken) {
         var apiKey = "65be5892c1ff3a2d670fe5a0";
-        var apiUrl = 'https://signup-828c.restdb.io/rest/signup?q={"username":"' + encodeURIComponent(username) + '"}';
-        
+        var apiUrl = `https://signup-828c.restdb.io/rest/signup/${userId}`;
+
         fetch(apiUrl, {
-            method: "GET",
+            method: 'PUT',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 "x-apikey": apiKey,
+                "Authorization": `Bearer ${sessionToken}` // Using session token for authorization
             },
+            body: JSON.stringify({ leaderboard: leaderboardScore })
         })
-        .then((response) => {
+        .then(response => {
             if (!response.ok) {
-                throw new Error("Network response was not ok");
+                throw new Error('Failed to update leaderboard');
             }
             return response.json();
         })
-        .then((data) => {
-            if (data.length > 0 && data[0].password === password) {
-                const updateUrl = `https://signup-828c.restdb.io/rest/signup/${data[0]._id}`;
-                return fetch(updateUrl, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        "x-apikey": apiKey,
-                    },
-                    body: JSON.stringify({ leaderboard: leaderboardScore })
-                });
-            } else {
-                throw new Error("Authentication failed: Incorrect username or password");
-            }
-        })
-        .then(updateResponse => {
-            if (!updateResponse.ok) {
-                return updateResponse.text().then(text => { throw new Error(`Update failed: ${updateResponse.status}, Body: ${text}`) });
-            }
-            return updateResponse.json();
-        })
         .then(updateData => {
             console.log('Leaderboard Update Success:', updateData);
-            // Display completion message
-            const quizContainer = document.querySelector(".quiz-container");
-            quizContainer.innerHTML = `<div class="text-center"><p>Quiz completed! Redirecting to leaderboard...</p></div>`;
-        
-            // Redirect to leaderboard.html after a delay
-            setTimeout(() => {
-                window.location.href = 'leaderboard.html';
-            }, 3000); // Adjust the delay here as needed (3000 milliseconds = 3 seconds)
+            alert('Score submitted successfully!');
+            window.location.href = 'leaderboard.html';
         })
         .catch(error => {
             console.error('Error:', error);
+            alert('Failed to submit score. Please try again.');
         });
-    }        
-    
+    }
 });
