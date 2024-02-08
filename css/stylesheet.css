@@ -661,14 +661,14 @@ svg path:hover {
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: #007bff;
+  background-color: var(--spacecadet);
   color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 1000; /* Ensure it appears above other content */
+  z-index: 1050; /* Ensure it appears above other content */
 }
 
 @media (min-width: 991px) {

@@ -123,3 +123,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// JavaScript to handle audio playback and icon toggling
+var audioPlayer = document.getElementById("audioPlayer");
+var toggleButtonIcon = document.querySelector("#toggleButton i");
+
+// Check if the audio was playing on the last visit
+var isAudioPlaying = sessionStorage.getItem("isAudioPlaying");
+var playbackPosition = parseFloat(sessionStorage.getItem("playbackPosition"));
+
+if (isAudioPlaying === "true" && !isNaN(playbackPosition)) {
+  audioPlayer.currentTime = playbackPosition;
+  audioPlayer.play();
+  toggleButtonIcon.classList.remove("bi-volume-mute-fill");
+  toggleButtonIcon.classList.add("bi-volume-up-fill");
+  audioPlayer.volume = 0.1; // Set volume to 0.1 (10%)
+}
+
+document.getElementById("toggleButton").addEventListener("click", function () {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    toggleButtonIcon.classList.remove("bi-volume-mute-fill");
+    toggleButtonIcon.classList.add("bi-volume-up-fill");
+    audioPlayer.volume = 0.1; // Set volume to 0.1 (10%)
+    sessionStorage.setItem("isAudioPlaying", "true");
+  } else {
+    audioPlayer.pause();
+    toggleButtonIcon.classList.remove("bi-volume-up-fill");
+    toggleButtonIcon.classList.add("bi-volume-mute-fill");
+    sessionStorage.setItem("isAudioPlaying", "false");
+  }
+});
+
+window.addEventListener("beforeunload", function () {
+  sessionStorage.setItem(
+    "playbackPosition",
+    audioPlayer.currentTime.toString()
+  );
+});
