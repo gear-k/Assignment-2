@@ -34,10 +34,10 @@ document
         console.log("Response Data: ", data); // For debugging
 
         if (data.length > 0 && data[0].password === password) {
-          // Password check should ideally be done on the server
           alert("Login Successful");
-          localStorage.setItem("isLoggedIn", "true"); // Store login state
-          window.location.href = "index.html"; // Redirect to index
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("userId", data[0]._id); // Storing user ID
+          localStorage.setItem("sessionToken", data[0].sessionToken);
         } else {
           alert("Login Failed: Incorrect email or password");
         }

@@ -8,8 +8,7 @@
 2. [User Audience Intent and Purpose](#user-audience-intent-and-purpose)
 3. [Project Overview](#project-overview)
 4. [Features](#features)
-5. [Usage](#usage)
-6. [Attribution](#attribution)
+5. [Attribution](#attribution)
 
 ### 1. Introduction<a name="introduction"></a>
 
@@ -49,6 +48,9 @@ Through its comprehensive platform, InflaGlobe empowers users to navigate the co
 - **Login Functionality:**
   - Securely access personalized features and data by logging into your account.
   - Customize your experience and save preferences for future use.
+- **Quiz and Leaderboard**
+  - Quiz to gamify and test users for educatioonal purposes
+  - Leaderboard of top scores on the quiz 
 
 ### 5. Attribution<a name="attribution"></a>
 

@@ -199,40 +199,21 @@
                 <th scope="col">#</th>
                 <th scope="col">Participant name</th>
                 <th scope="col">Location</th>
-                <th scope="col">Date</th>
                 <th scope="col">Points</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Ryan Sim Ze Ying</td>
-                <td>Singapore</td>
-                <td>01.05.2021</td>
-                <td><span class="badge bg-warning">4.2</span></td>
+              <tr id="firstPlace" class="bg-gold">
+                <!-- First place -->
               </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Madelyn Vetrovs</td>
-                <td>Kazakhstan</td>
-                <td>01.05.2021</td>
-                <td><span class="badge bg-secondary">4.2</span></td>
+              <tr id="secondPlace" class="bg-silver">
+                <!-- Second place -->
               </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Madelyn Vetrovs</td>
-                <td>Kazakhstan</td>
-                <td>01.05.2021</td>
-                <td><span class="badge bg-primary">4.2</span></td>
+              <tr id="thirdPlace" class="bg-bronze">
+                <!-- Third place -->
               </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Madelyn Vetrovs</td>
-                <td>Kazakhstan</td>
-                <td>01.05.2021</td>
-                <td><span class="badge bg-primary">4.2</span></td>
-              </tr>
-              <!-- More rows here -->
+              <!-- Additional rows will be populated here -->
+              <tbody id="leaderboardBody"></tbody>
             </tbody>
           </table>
         </div>
@@ -330,5 +311,6 @@
     <script src="libraries/chart/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="libraries/chart/chartData.js"></script>
+    <script src="js/leaderbaord.js"></script>
   </body>
 </html>
