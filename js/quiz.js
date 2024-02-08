@@ -104,13 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
         authenticateAndUpdateScore(username, password, score);
     }
 
-    // Authenticate user and update leaderboard score
     function authenticateAndUpdateScore(username, password, leaderboardScore) {
         var apiKey = "65be5892c1ff3a2d670fe5a0";
-        var apiUrl =
-            'https://signup-828c.restdb.io/rest/signup?q={"username":"' +
-            encodeURIComponent(username) + '"}';
-    
+        var apiUrl = 'https://signup-828c.restdb.io/rest/signup?q={"username":"' + encodeURIComponent(username) + '"}';
+        
         fetch(apiUrl, {
             method: "GET",
             headers: {
@@ -126,10 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then((data) => {
             if (data.length > 0 && data[0].password === password) {
-                // Construct the update URL using username
-                const updateUrl = `https://signup-828c.restdb.io/rest/signup?q={"username":"${encodeURIComponent(username)}"}`;
+                const updateUrl = `https://signup-828c.restdb.io/rest/signup/${data[0]._id}`;
                 return fetch(updateUrl, {
-                    method: 'PUT', // or 'PATCH'
+                    method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
                         "x-apikey": apiKey,
@@ -142,18 +138,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(updateResponse => {
             if (!updateResponse.ok) {
-                throw new Error(`Update failed: ${updateResponse.status}`);
+                return updateResponse.text().then(text => { throw new Error(`Update failed: ${updateResponse.status}, Body: ${text}`) });
             }
             return updateResponse.json();
-        })  
+        })
         .then(updateData => {
             console.log('Leaderboard Update Success:', updateData);
-            // Handle success as needed
         })
         .catch(error => {
             console.error('Error:', error);
         });
     }
     
-
 });
