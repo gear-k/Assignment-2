@@ -191,19 +191,35 @@
     </section>
 
     <div
-      class="d-flex justify-content-center align-items-center"
-      style="min-height: 100vh"
-    >
-      <main class="text-center slightly-above-center text-ghost-white">
-        <h1>Ready to Start the Quiz?</h1>
-        <p>Check the leaderboards after this to see where you stand!</p>
-        <a href="quiz.html"
-          ><button type="button" class="btn btn-spacecadet rounded px-5 py-2">
+    class="d-flex justify-content-center align-items-center"
+    style="min-height: 100vh"
+  >
+    <main class="text-center slightly-above-center text-ghost-white">
+      <h1>Ready to Start the Quiz?</h1>
+      <p>Check the leaderboards after this to see where you stand!</p>
+      <p>Earn 5 points and get a prestigious gold username!</p>
+      
+      <!-- Play Button -->
+      <div>
+        <a href="quiz.html">
+          <button type="button" class="btn btn-spacecadet rounded px-5 py-2">
             Play
-          </button></a
-        >
-      </main>
-    </div>
+          </button>
+        </a>
+      </div>
+  
+      <!-- Leaderboard Button -->
+      <div class="mt-3"> <!-- Added margin-top for spacing -->
+        <button 
+          type="button" 
+          class="btn btn-spacecadet rounded px-5 py-2"
+          onclick="location.href='leaderboard.html';">
+          Leaderboard
+        </button>
+      </div>
+    </main>
+  </div>
+  
     <div class="container-fluid footer text-ghost-white">
       <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
