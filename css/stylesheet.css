@@ -27,10 +27,6 @@
   border: 1px solid var(--oxfordblue) !important;
 }
 
-.border-bottom {
-  border-color: var(--oxfordblue) !important;
-}
-
 .bg-oxfordblue {
   background-color: var(--oxfordblue);
 }
@@ -62,31 +58,6 @@
   color: var(--ghost-white);
 }
 
-.btn-account {
-  color: var(--ghost-white);
-  border-style: none;
-}
-
-.btn-account:hover {
-  background-color: var(--oxfordblue);
-  color: var(--ghost-white);
-}
-.btn-account:focus {
-  color: var(--ghost-white);
-}
-
-.bg-emerald {
-  background-color: var(--emerald);
-}
-
-.bg-gunmetal {
-  background-color: var(--gunmetal);
-}
-
-.bg-ghost-white {
-  background-color: var(--ghost-white);
-}
-
 .border-bottom-offcanvas {
   border-color: var(--ghost-white) !important;
 }
@@ -114,35 +85,12 @@
   background-color: var(--oldrose);
 }
 
-.bg-purpureus {
-  background-color: var(--purpureus);
-}
-
-.bg-davys-gray {
-  background-color: var(--davys-gray);
-}
-
-.text-emerald {
-  color: var(--emerald);
-}
-
 .text-gunmetal {
   color: var(--gunmetal);
 }
 
 .text-ghost-white {
   color: var(--ghost-white) !important;
-}
-
-.btn-outline-spacecadet {
-  color: var(--spacecadet); /* Text color */
-  border-color: var(--spacecadet); /* Border color */
-  background-color: transparent; /* Ensure background is transparent */
-}
-
-.btn-outline-spacecadet:hover {
-  background-color: var(--spacecadet); /* Background color on hover */
-  color: #fff; /* Text color on hover */
 }
 
 .btn-outline-ghostwhite {
@@ -155,25 +103,12 @@
   background-color: var(--ghost-white); /* Background color on hover */
   color: var(--gunmetal); /* Text color on hover */
 }
-
-.text-purpureus {
-  color: var(--purpureus);
-}
-
-.text-davys-gray {
-  color: var(--davys-gray);
-}
 body {
   background-color: var(--ghost-white);
 }
 
 body .offcanvas {
   max-width: 20rem;
-}
-
-.active-style {
-  color: #ff0000; /* Choose a color that stands out */
-  /* Additional styling if needed */
 }
 
 .navbar-brand img {
@@ -191,30 +126,6 @@ body .offcanvas {
 
 .nav-item:last-child {
   margin: 0;
-}
-
-.custom-font-size-1 {
-  font-size: 5rem;
-}
-
-.custom-font-size-2 {
-  font-size: 4.5rem;
-}
-
-.custom-font-size-3 {
-  font-size: 4rem;
-}
-
-.custom-font-size-4 {
-  font-size: 3.5rem;
-}
-
-.custom-font-size-5 {
-  font-size: 3rem;
-}
-
-.custom-font-size-6 {
-  font-size: 2.5rem;
 }
 
 .heroimage {
@@ -281,31 +192,8 @@ body .offcanvas {
   transition: background-color 0.5s;
 }
 
-.pt-6,
-.py-6 {
-  padding-top: 4rem;
-}
-
-.py-6 {
-  padding-bottom: 4rem;
-}
-
-.pb-6 {
-  padding-bottom: 4rem;
-}
-
 .ps-6 {
   padding-left: 4rem;
-}
-.custom-text-color {
-  color: #000000 !important;
-}
-
-.bottom-image {
-  opacity: 10%;
-  width: 1920px;
-  height: 500px;
-  object-fit: cover;
 }
 
 .custom-underline {
@@ -315,16 +203,6 @@ body .offcanvas {
 
 .slightly-above-center {
   transform: translateY(-12%);
-}
-
-.icon-style {
-  font-size: 5rem;
-  margin-bottom: 2rem;
-}
-
-.py-8rem {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 
 /* The following are new or conflicting rules that have been resolved */
@@ -337,83 +215,10 @@ body .offcanvas {
   padding-top: 20rem;
   padding-bottom: 10rem;
 }
-
-.px-6 {
-  padding: 4rem;
-}
-
-.pt-7 {
-  padding-top: 6rem;
-}
 /* The .py-* classes have been standardized according to the first code snippet */
-.py-7 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.py-8 {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-}
-
-.py-9 {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
 .py-lg-9 {
   padding-top: 0rem;
   padding-bottom: 0rem;
-}
-
-.py-10 {
-  padding-top: 10.5rem;
-  padding-bottom: 10.5rem;
-}
-
-.pt-10 {
-  padding-top: 10.5rem;
-}
-
-.pt-11 {
-  padding-top: 13rem;
-}
-.logos {
-  font-size: 5rem;
-}
-
-.logos-padding {
-  padding-left: 20rem;
-  padding-right: 20rem;
-}
-
-.custom-img-size {
-  max-width: 65%; /* or any percentage or fixed width you desire */
-  height: auto; /* maintain aspect ratio */
-}
-
-.btn-ghost-white {
-  color: var(--gunmetal);
-  background: var(--ghost-white);
-}
-
-.btn-custom {
-  color: var(--ghost-white);
-  background: var(--gunmetal);
-  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
-}
-
-.btn-custom:hover {
-  color: var(--gunmetal);
-  background: var(--ghost-white); /* Use var() for background property */
-}
-
-.image-gallery {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.image-gallery::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
 }
 
 .footer {
@@ -422,14 +227,6 @@ body .offcanvas {
 
 .navbtn {
   font-size: 1.1rem;
-}
-.quiz-card {
-  margin-bottom: 1rem;
-  background: var(--spacecadet);
-  color: var(--ghost-white);
-}
-.quiz-card .card-body {
-  font-size: 1.25rem; /* Larger font size */
 }
 .question {
   font-size: 1.5rem; /* Even larger font size for questions */
@@ -453,55 +250,14 @@ body .offcanvas {
   font-size: 6rem; /* Large number font size */
   color: var(--spacecadet); /* Dark grey color for the number */
 }
-.card-text {
-  color: #666; /* Lighter grey color for the text */
-  font-size: 1rem;
-}
-
-.font-weight-extra-bold {
-  font-weight: 400 !important; /* You can use 700 for bold or 900 for extra bold, depending on what you need */
-}
-
-.half-image {
-  position: absolute;
-  left: 50%;
-  bottom: -50%; /* This should be half of the image's height to center it on the boundary */
-  transform: translate(
-    -50%,
-    50%
-  ); /* Center horizontally and move up 50% of the image's height */
-  width: auto; /* Adjust width as necessary, could be 100% if you want it full width */
-  max-width: 100%; /* Ensures the image is responsive and does not exceed its parent's width */
-  height: auto; /* Maintain aspect ratio */
-}
 
 .text-body-secondary {
   font-size: 1.1rem;
 }
 /* Additional CSS to ensure text in the next section clears the overhanging image */
-#second-section {
-  clear: both;
-  padding-top: 35%; /* Adjust this value based on the size of the image to prevent overlap */
-}
-
-.rounded-image-section img {
-  border-radius: 20px; /* Adjust the px value to the desired border-radius */
-  display: block; /* Removes bottom space by making image a block-level element */
-  width: 100%; /* Forces the image to occupy the full width of its container */
-  height: auto; /* Keeps the image's aspect ratio */
-  margin: 0 auto; /* Removes margin and centers the image if necessary */
-}
 
 .ml-auto {
   margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.semibold {
-  font-weight: 600 !important;
 }
 
 .bold {
@@ -520,10 +276,6 @@ body .offcanvas {
   position: relative; /* Positions the pseudo-element relative to its parent */
   left: 0; /* Ensures the border starts from the left edge */
   top: -20px; /* Increase this value to move the border higher */
-}
-
-.mt-auto {
-  margin-top: auto;
 }
 
 .rounded-bottom-right {
@@ -571,10 +323,6 @@ body .offcanvas {
   font-size: 1.5rem;
 }
 
-.object-cover {
-  object-fit: center;
-}
-
 svg path {
   cursor: pointer;
 }
@@ -605,37 +353,6 @@ svg path:hover {
 
 #map {
   height: 90vh;
-}
-.leaflet-interactive:focus {
-  outline: none !important;
-  border: none !important;
-}
-
-.bg-accent {
-  background-color: var(--accent-color) !important;
-}
-
-.btn-accent {
-  color: #fff !important;
-  background-color: var(--accent-color) !important;
-  border-color: var(--accent-color) !important;
-}
-
-.btn-accent:hover {
-  color: #fff !important;
-  background-color: darken(var(--accent-color), 10%) !important;
-  border-color: darken(var(--accent-color), 10%) !important;
-}
-
-.loading-bar-progress {
-  transition: width 0.3s ease;
-}
-
-#myChart {
-  max-width: 600px; /* Adjust the width as needed */
-  margin-left: 0; /* Align to the left */
-  margin-right: auto; /* Keep it centered on the right side */
-  height: 400px; /* Adjust the height as needed */
 }
 
 .bg-gold {
@@ -684,11 +401,6 @@ svg path:hover {
   .min-vh-lg-100 {
     min-height: 100vh; /* This will now only apply to screens smaller than lg */
     object-fit: cover;
-  }
-
-  .ml-lg-auto {
-    margin-left: auto;
-    margin-right: auto; /* These will now only apply to screens smaller than lg */
   }
 
   .custom-row::before {
