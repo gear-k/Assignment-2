@@ -92,14 +92,13 @@
                     Account
                   </button>
                 </a>
-                  <button
-                    id="logoutButton"
-                    type="button"
-                    class="btn btn-light rounded py-2 px-4 border-0 navbtn logoutbtn"
-                  >
-                    Logout
-                  </button>
-                </div>
+                <button
+                  id="logoutButton"
+                  type="button"
+                  class="btn btn-light rounded py-2 px-4 border-0 navbtn logoutbtn"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           </ul>
@@ -140,6 +139,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="map.html">Map</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About</a>
                 </li>
@@ -393,20 +393,11 @@
                 <h2 class="display-2">Statistical Map</h2>
               </div>
               <div class="ps-0 py-5 ps-lg-5" id="indexMapSection">
-                <dotlottie-player
-                  id="lottie-player"
-                  src="https://lottie.host/4963347d-182d-4164-84e5-809c0362dc3c/RiZmHqCDb9.json"
-                  background="transparent"
-                  speed="1"
-                  style="height: 5vh; width: 5vh"
-                  loop
-                  autoplay
-                ></dotlottie-player>
-
                 <p class="display-6">
                   We've Crafted an Interactive Map Unveiling GDP Growth of
                   Countries. Check It Out.
                 </p>
+
                 <a
                   href="map.html
                 "
@@ -416,7 +407,16 @@
                     type="button"
                     class="btn btn-outline-light rounded px-3 py-2"
                   >
-                    Open Map
+                    <dotlottie-player
+                      id="lottie-player"
+                      src="https://lottie.host/4963347d-182d-4164-84e5-809c0362dc3c/RiZmHqCDb9.json"
+                      background="transparent"
+                      speed="1"
+                      style="height: 1vh; width: 1vh"
+                      loop
+                      autoplay
+                    ></dotlottie-player
+                    >Open Map
                   </button></a
                 >
               </div>

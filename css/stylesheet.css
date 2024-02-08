@@ -671,6 +671,13 @@ svg path:hover {
   z-index: 1050; /* Ensure it appears above other content */
 }
 
+.lottie-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 @media (min-width: 991px) {
   /* Adjust 991px based on the exact lg breakpoint you are using, this targets screens smaller than lg */
   .min-vh-lg-100 {
