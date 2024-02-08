@@ -487,12 +487,9 @@
             </p>
           </div>
           <div class="pt-5 pb-5">
-            <button
-              class="btn btn-outline-ghostwhite bold rounded px-5"
-              style="font-size: 2rem"
-            >
+            <button id="playButton" class="btn btn-outline-ghostwhite bold rounded px-5" style="font-size: 2rem">
               Play
-            </button>
+          </button>
           </div>
         </div>
       </section>
@@ -592,5 +589,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
     <script src="libraries/gsap/gsap.js"></script>
+    <script>
+      document.getElementById('playButton').addEventListener('click', function() {
+          window.location.href = 'gamepage.html';
+      });
+  </script>
   </body>
 </html>
