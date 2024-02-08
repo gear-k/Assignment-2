@@ -93,22 +93,23 @@
                     </button>
                   </a>
                 </div>
-                <div id="accountButton" class="d-none account-button">
+                <a href="account.html" class="no-underline">
                   <button
+                    id="accountButton"
                     type="button"
-                    class="btn btn-light rounded py-2 px-4 border-0 navbtn"
+                    class="btn btn-light rounded py-2 px-4 border-0 navbtn account-button no-underline"
                   >
                     Account
                   </button>
-
-                  <button
-                    id="logoutButton"
-                    type="button"
-                    class="btn btn-light rounded py-2 px-4 border-0 navbtn logoutbtn"
-                  >
-                    Logout
-                  </button>
-                </div>
+                  <div class="pt-2"></div>
+                </a>
+                <button
+                  id="logoutButton"
+                  type="button"
+                  class="btn btn-light rounded py-2 px-4 border-0 navbtn logoutbtn"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           </ul>
@@ -122,7 +123,10 @@
           data-bs-theme="light"
         >
           <div class="container">
-            <a class="navbar-brand" href="index.html"></a>
+            <a class="navbar-brand" href="index.html">
+              <span class="d-none d-md-block">InflaGlobe</span>
+              <!-- This will hide the text on 'lg' and smaller screens -->
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -149,6 +153,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="map.html">Map</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About</a>
                 </li>

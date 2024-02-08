@@ -11,8 +11,6 @@ window.addEventListener("resize", function () {
     }
   }
 });
-
-// Change navbar color and button styles on scroll
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");

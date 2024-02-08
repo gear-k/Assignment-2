@@ -83,7 +83,7 @@
                     </button>
                   </a>
                 </div>
-                <a href="account.html">
+                <a href="account.html" class="no-underline">
                   <button
                     id="accountButton"
                     type="button"
@@ -91,6 +91,7 @@
                   >
                     Account
                   </button>
+                  <div class="pt-2"></div>
                 </a>
                 <button
                   id="logoutButton"
@@ -112,7 +113,10 @@
           data-bs-theme="light"
         >
           <div class="container">
-            <a class="navbar-brand" href="index.html">InflaGlobe</a>
+            <a class="navbar-brand" href="index.html">
+              <span class="">InflaGlobe</span>
+              <!-- This will hide the text on 'lg' and smaller screens -->
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -393,6 +397,20 @@
                 <h2 class="display-2">Statistical Map</h2>
               </div>
               <div class="ps-0 py-5 ps-lg-5" id="indexMapSection">
+                <a
+                  href="map.html
+                "
+                  ><dotlottie-player
+                    id="lottie-player"
+                    src="https://lottie.host/4963347d-182d-4164-84e5-809c0362dc3c/RiZmHqCDb9.json"
+                    background="transparent"
+                    speed="1"
+                    style="height: 5vh; width: 5vh"
+                    loop
+                    autoplay
+                  ></dotlottie-player
+                ></a>
+
                 <p class="display-6">
                   We've Crafted an Interactive Map Unveiling GDP Growth of
                   Countries. Check It Out.
@@ -407,16 +425,8 @@
                     type="button"
                     class="btn btn-outline-light rounded px-3 py-2"
                   >
-                    <dotlottie-player
-                      id="lottie-player"
-                      src="https://lottie.host/4963347d-182d-4164-84e5-809c0362dc3c/RiZmHqCDb9.json"
-                      background="transparent"
-                      speed="1"
-                      style="height: 1vh; width: 1vh"
-                      loop
-                      autoplay
-                    ></dotlottie-player
-                    >Open Map
+                    Open Map
+                    <!-- Wrapped text in a span for separate styling -->
                   </button></a
                 >
               </div>
