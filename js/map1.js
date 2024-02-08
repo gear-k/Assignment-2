@@ -1,114 +1,121 @@
 $(document).ready(function () {
-  // Initialize the Leaflet map
-  var map = L.map("map").setView([20, 0], 2);
+  var geojson; // Moved outside to make it globally accessible
+  var map = L.map("map", {
+    maxBounds: [
+      [-85, 180],
+      [85, -180],
+    ],
+    maxBoundsViscosity: 1.0, // Prevents users from dragging the map outside the specified bounds
+    center: [20, 0],
+    zoom: 3,
+    minZoom: 3, // Prevents zooming out too far
+    maxZoom: 18, // Optional: You can also limit the maximum zoom level
+  });
 
-  // Add a base layer (OpenStreetMap tiles)
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     noWrap: true,
     maxZoom: 19,
     attribution: "© OpenStreetMap contributors",
   }).addTo(map);
 
-  // Define bounds to restrict the map view
-  var southWest = L.latLng(-90, -180),
-      northEast = L.latLng(90, 180);
-  var bounds = L.latLngBounds(southWest, northEast);
-  map.setMaxBounds(bounds);
-
-  // Function to change the style of the feature on hover
   function highlightFeature(e) {
     var layer = e.target;
-
     layer.setStyle({
-      fillColor: 'pink', // Set the fill color to pink on hover
-      fillOpacity: 0.7,  // Adjust the opacity
-      weight: 1          // Keep the border weight as 1
+      fillColor: "pink",
+      fillOpacity: 0.7,
+      weight: 1,
     });
-
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
       layer.bringToFront();
     }
   }
 
-  // Function to reset the style on mouseout
-  function resetHighlight(e) {
-    geojson.resetStyle(e.target);
-  }
-
   // Function to handle click on feature (e.g., country)
   function onClick(e) {
     var layer = e.target;
-    // Remove the border when clicked
-    layer.setStyle({ weight: 0 });
 
-    // Fetch GDP growth data and update the tooltip content
+    // Set style to remove any border or outline
+    layer.setStyle({
+      weight: 0, // No border
+      fillColor: "#ececec", // Or any fill color you prefer
+      fillOpacity: 0.7, // Adjust opacity as needed
+    });
+
+    // Prevent the click from setting the layer into a "focused" state that might cause an outline
+    if (layer._path) {
+      // Check if the layer is SVG element
+      layer._path.setAttribute("outline", "none");
+    }
+
+    // Additional logic for handling click event, such as updating tooltip content
     if (e.target.feature.properties && e.target.feature.properties.name) {
       getAndDisplayGDPGrowth(e.target.feature.properties.name, layer);
     }
   }
 
-  // Function to handle mouseover on feature (e.g., country)
-  function onFeatureHover(e) {
-    var layer = e.target;
-    var countryName = layer.feature.properties.name;
-
-    console.log("Hovering over country: " + countryName); // Debugging log
-
-    // Fetch GDP growth data and update the tooltip content
-    getAndDisplayGDPGrowth(countryName, layer);
+  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    e.target.closeTooltip();
   }
 
-  // Function to handle each feature (e.g., country) in the GeoJSON data
   function onEachFeature(feature, layer) {
-    // Bind a tooltip to the layer
-    layer.bindTooltip("", {
-      permanent: false,
-      direction: "auto",
-      sticky: true, // Make the tooltip follow the cursor
-    });
+    // Bind a basic tooltip initially
+    layer.bindTooltip("Loading data...");
 
-    // Event handlers for mouseover, mouseout, and click
-    layer.on('mouseover', onFeatureHover);
-    layer.on('mouseout', resetHighlight);
-    layer.on('click', onClick);
+    layer.on({
+      mouseover: function (e) {
+        highlightFeature(e);
+        var countryName = feature.properties.name; // Adjust the property name based on your GeoJSON
+        console.log("Fetching data for:", countryName); // Debugging line
+        getAndDisplayGDPGrowth(countryName, layer);
+      },
+      mouseout: resetHighlight,
+      click: onClick, // Bind the click event to the onClick function
+    });
   }
 
-  var geojson; // Define a variable to hold your GeoJSON layer
   // Load the GeoJSON file and add it to the map
-  $.getJSON("../data/gj.geojson", function (geoJsonData) {
+  $.getJSON("../data/custom.geo.json", function (geoJsonData) {
     geojson = L.geoJSON(geoJsonData, {
       style: function (feature) {
-        return { color: 'black', weight: 1, fillColor: 'white', fillOpacity: 1 }; // Set initial style of countries
+        return { color: "transparent", fillColor: "#ececec" };
       },
       onEachFeature: onEachFeature,
     }).addTo(map);
   });
 
   // Function to fetch GDP growth data and display it
-  function getAndDisplayGDPGrowth(place, layer) {
-    fetch(`https://api.api-ninjas.com/v1/country?name=${encodeURIComponent(place)}`, {
-      method: "GET",
-      headers: {
-        "X-Api-Key": "hNz6dyYaOqoKdeP8mjKziQ==CALsnFzlcI5CPkt3" // Replace with your actual API key
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.length > 0) {
-        const countryName = data[0].name; // Accessing the name
-        const gdpGrowth = data[0].gdp_growth; // Accessing the gdp_growth
-        const gdp = data[0].gdp; // Accessing the gdp
-
-        // Dynamically update the tooltip content and position
-        layer.bindTooltip(`Country: ${countryName}, GDP: ${gdp}, GDP Growth: ${gdpGrowth}%`).openTooltip(layer.getLatLng());
-      } else {
-        console.error("No data found for:", place);
-        layer.setTooltipContent("Data not available");
+  function getAndDisplayGDPGrowth(countryName, layer) {
+    fetch(
+      `https://api.api-ninjas.com/v1/country?name=${encodeURIComponent(
+        countryName
+      )}`,
+      {
+        method: "GET",
+        headers: {
+          "X-Api-Key": "hNz6dyYaOqoKdeP8mjKziQ==CALsnFzlcI5CPkt3", // Replace with your actual API key
+        },
       }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      layer.setTooltipContent("Error fetching data");
-    });
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        if (data && data.length > 0) {
+          const countryName = data[0].name; // Assuming the API returns a 'name' field with the country name
+          const gdpGrowth = data[0].gdp_growth; // Accessing the GDP growth from the API response
+
+          // Setting the tooltip content to include both country name and GDP growth
+
+          layer.setTooltipContent(
+            `Country: ${countryName}, GDP Growth: ${gdpGrowth}%`
+          );
+        } else {
+          console.error("No data found for:", countryName);
+          layer.setTooltipContent("Data not available");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data for:", countryName, error);
+        layer.setTooltipContent("Error fetching data");
+      });
   }
 });

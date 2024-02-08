@@ -603,6 +603,16 @@ svg path:hover {
   font-size: 1.5rem;
 }
 
+#map {
+  height: 90vh;
+}
+.leaflet-interactive:focus {
+  outline: none !important;
+  border: none !important;
+}
+.nav-link {
+  color: white !important;
+}
 .bg-accent {
   background-color: var(--accent-color) !important;
 }
